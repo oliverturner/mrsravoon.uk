@@ -1,0 +1,36 @@
+{
+  "name": "ravoon.uk",
+  "description": "A boilerplate for building a fast static website with the Eleventy static site generator, for deployment to Netlify.",
+  "version": "1.0.3",
+  "homepage": "https://www.ravoon.uk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oliverturner/ravoon.uk"
+  },
+  "author": {
+    "name": "Oliver Turner",
+    "email": "oliver.turner@codedsignal.co.uk",
+    "url": "https://www.codedsignal.co.uk"
+  },
+  "bugs": {
+    "url": "https://github.com/oliverturner/ravoon.uk/issues"
+  },
+  "dependencies": {
+    "@11ty/eleventy-navigation": "^0.1.5",
+    "clean-css": "^4.2.1",
+    "html-minifier": "^4.0.0",
+    "uglify-es": "^3.3.9"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0-beta.3",
+    "luxon": "^1.22.2",
+    "markdown-it": "11.0.0",
+    "markdown-it-anchor": "^5.2.7"
+  },
+  "scripts": {
+    "build": "npx eleventy",
+    "debug": "DEBUG=* npx eleventy",
+    "watch": "npx eleventy --watch"
+  }
+}
