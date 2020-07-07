@@ -1,3 +1,259 @@
+:root {
+  --primary: blue;
+  --secondary: white;
+  --background: #fff0eb;
+
+  --chrome-bg: #222;
+  --chrome-highlight: #444;
+  --chrome-text: wheat;
+
+  @media (min-width: 768px) {
+    font-size: 1.1rem;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  background-color: hotpink;
+  padding: 0;
+  margin: 0;
+  font-family: "Gill Sans", "Avenir", "Avenir Next", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  height: 100vh;
+  background-color: var(--background);
+}
+
+p,
+pre,
+code {
+  line-height: 1.5;
+}
+
+a[href],
+a[href]:visited {
+  color: inherit;
+}
+
+a[href]:not(:hover) {
+  text-decoration: none;
+}
+
+/* Post Tags */
+a[rel="tag"],
+a[rel="tag"]:visited {
+  display: inline-block;
+  vertical-align: text-top;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.625em;
+  padding: 0 0.5em;
+  line-height: 2em;
+  height: 2em;
+  border: 1px solid var(--secondary);
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-radius: 0.25em;
+  text-decoration: none;
+  margin: 0 0.5em 0.5em 0;
+}
+
+a[rel="tag"]:hover {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+a[rel="tag"]:last-child {
+  margin-right: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 37.5rem;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+.title {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  font-weight: 200;
+  font-style: normal;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: var(--spacing);
+
+  & > span {
+    margin-left: var(--spacing);
+    font-size: 0.5em;
+    font-variant: normal;
+    font-style: italic;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    letter-spacing: initial;
+
+    &::after {
+      content: "";
+      flex: 1 0 auto;
+    }
+  }
+}
+
+h1 {
+  --spacing: 0.2rem;
+}
+
+h2 {
+  --spacing: 0.16rem;
+}
+
+h3 {
+  --spacing: 0.1rem;
+}
+
+.chrome {
+  background: var(--chrome-bg);
+  color: var(--chrome-text);
+}
+
+.header__nav {
+  text-align: center;
+
+  @media (min-width: 640px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: start;
+  }
+}
+
+/* Header Logo (style as h2) */
+.header__title {
+  --spacing: 0.3rem;
+
+  display: block;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  line-height: 1;
+  font-size: 2em;
+
+  @media (min-width: 640px) {
+    padding: 0;
+  }
+}
+
+.header__links {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 0;
+  list-style: none;
+}
+
+.header__link {
+  flex: 1;
+
+  padding: 1em;
+
+  &:hover,
+  &[data-current="current item"] {
+    text-decoration: none;
+    background-color: var(--chrome-highlight);
+  }
+}
+
+.main,
+.main__inner {
+  padding: 1rem;
+}
+
+.main {
+  [data-current="about"] & {
+    padding: 0;
+  }
+}
+
+.footer {
+  padding: 1em;
+  font-size: smaller;
+}
+
+.hero {
+  margin: 0;
+
+  @media (min-width: 768px) {
+    max-width: 50%;
+    float: left;
+    margin: 0 1rem 0 0;
+  }
+
+  & > figcaption {
+    margin: 0;
+    padding: 0.5rem;
+    font-size: smaller;
+  }
+}
+
+/* Posts List */
+article {
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--secondary);
+}
+
+main > section > article > * {
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* Contact Form */
+form {
+  display: grid;
+  padding: 2em 0;
+}
+
+form label {
+  display: none;
+}
+
+input,
+textarea,
+button {
+  width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  font-size: 1rem;
+  font-family: "Avenir", "Avenir Next", sans-serif;
+}
+
+input,
+textarea {
+  border: 1px solid black;
+}
+
+button {
+  border: 1px solid var(--primary);
+  background-color: var(--primary);
+  color: var(--secondary);
+  cursor: pointer;
 }

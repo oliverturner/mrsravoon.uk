@@ -1,9 +1,9 @@
 ---
-layout: layouts/blog.njk
-title: Blog
+layout: layouts/sightings.njk
+title: Sightings
 date: 2017-01-01
-permalink: /blog/index.html
+permalink: /sightings/index.html
 eleventyNavigation:
-  key: Blog
+  key: Sightings
   order: 2
 ---
