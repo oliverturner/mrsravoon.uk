@@ -1,0 +1,14 @@
+{
+	"extends": "stylelint-config-recommended",
+	"plugins": ["stylelint-selector-bem-pattern"],
+	"rules": {
+		"no-descending-specificity": null,
+		"selector-nested-pattern": "^&",
+		"at-rule-no-unknown": [
+			true,
+			{
+				"ignoreAtRules": ["function", "if", "each", "include", "mixin"]
+			}
+		]
+	}
+}
