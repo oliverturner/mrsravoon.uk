@@ -31,21 +31,16 @@ body {
   grid-template-rows: auto 1fr auto;
 
   height: 100vh;
+  overflow-y: scroll;
   background-color: var(--background);
 }
 
-p,
-pre,
-code {
+p {
   line-height: 1.5;
 }
 
-a[href],
-a[href]:visited {
+a {
   color: inherit;
-}
-
-a[href]:not(:hover) {
   text-decoration: none;
 }
 
@@ -78,6 +73,11 @@ a[rel="tag"]:last-child {
   margin-right: 0;
 }
 
+button {
+  border: none;
+  cursor: pointer;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -93,41 +93,38 @@ h2,
 h3,
 h4,
 .title {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-
+  font-size: var(--size, 1);
   font-weight: 200;
   font-style: normal;
   font-variant: small-caps;
-  text-transform: lowercase;
+  text-transform: uppercase;
   letter-spacing: var(--spacing);
 
   & > span {
-    margin-left: var(--spacing);
+    display: block;
+
     font-size: 0.5em;
     font-variant: normal;
     font-style: italic;
     font-family: Georgia, "Times New Roman", Times, serif;
+    text-transform: lowercase;
     letter-spacing: initial;
-
-    &::after {
-      content: "";
-      flex: 1 0 auto;
-    }
   }
 }
 
 h1 {
   --spacing: 0.2rem;
+  --size: 1.6rem;
 }
 
 h2 {
   --spacing: 0.16rem;
+  --size: 1.4rem;
 }
 
 h3 {
   --spacing: 0.1rem;
+  --size: 1.2rem;
 }
 
 .chrome {
@@ -150,12 +147,12 @@ h3 {
 /* Header Logo (style as h2) */
 .header__title {
   --spacing: 0.3rem;
+  --size: 1.2rem;
 
   display: block;
   margin: 0;
   padding: 0.5rem 1rem;
   line-height: 1;
-  font-size: 2em;
 
   @media (min-width: 640px) {
     padding: 0;
@@ -188,6 +185,20 @@ h3 {
 }
 
 .main {
+  & p {
+    margin: 0;
+  }
+
+  & p + p {
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 1rem 0;
+  }
+}
+
+.main__inner {
   [data-current="about"] & {
     padding: 0;
   }
@@ -229,31 +240,21 @@ main > section > article > * {
 /* Contact Form */
 form {
   display: grid;
-  padding: 2em 0;
-}
+  gap: 0.5rem;
 
-form label {
-  display: none;
+  padding: 2em 0;
 }
 
 input,
 textarea,
 button {
   width: 100%;
-  padding: 1em;
-  margin-bottom: 1em;
+  padding: 0.5rem;
   font-size: 1rem;
-  font-family: "Avenir", "Avenir Next", sans-serif;
+  font-family: inherit;
 }
 
 input,
 textarea {
   border: 1px solid black;
-}
-
-button {
-  border: 1px solid var(--primary);
-  background-color: var(--primary);
-  color: var(--secondary);
-  cursor: pointer;
 }

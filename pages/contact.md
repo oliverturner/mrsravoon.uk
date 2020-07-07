@@ -5,7 +5,7 @@ section: report
 date: 2018-01-01
 permalink: /report/index.html
 eleventyNavigation:
-  key: Report
+  key: Report!
   order: 3
 ---
-If you have been lucky enough to survive an encounter with MRS RAVOON you may make a report in the standard fashion:
+If you have survived an encounter with MRS RAVOON you may make a report in the standard fashion:
