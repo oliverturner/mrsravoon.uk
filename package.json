@@ -46,15 +46,13 @@
   "lint-staged": {
     "*.js": [
       "npm run prettier",
-      "npm run lint:js -- --fix",
-      "git add"
+      "npm run lint:js -- --fix"
     ],
     "*.css": [
       "npm run lint:css"
     ],
     "*.scss": [
-      "npm run lint:css",
-      "git add"
+      "npm run lint:css"
     ]
   },
   "scripts": {
