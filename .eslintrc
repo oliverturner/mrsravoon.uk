@@ -16,8 +16,10 @@
     "sourceType": "module",
     "ecmaVersion": 2018
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:jest/recommended"
-  ]
+  "extends": ["eslint:recommended", "plugin:jest/recommended"],
+  "globals": {
+    "CMS": true,
+    "h": true,
+    "createClass": true
+  }
 }

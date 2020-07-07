@@ -47,8 +47,10 @@
     "*.js": [
       "npm run prettier",
       "npm run lint:js -- --fix",
-      "npm run lint:css",
       "git add"
+    ],
+    "*.css": [
+      "npm run lint:css"
     ],
     "*.scss": [
       "npm run lint:css",
