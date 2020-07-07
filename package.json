@@ -18,8 +18,11 @@
   },
   "dependencies": {
     "@11ty/eleventy-navigation": "^0.1.5",
+    "autoprefixer": "9.8.4",
     "clean-css": "^4.2.1",
     "html-minifier": "^4.0.0",
+    "postcss": "7.0.32",
+    "sass": "1.26.10",
     "uglify-es": "^3.3.9"
   },
   "devDependencies": {

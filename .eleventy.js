@@ -77,7 +77,7 @@ module.exports = function (eleventyConfig) {
   let markdownItAnchor = require("markdown-it-anchor");
   let options = {
     html: true,
-    breaks: true,
+    breaks: false,
     linkify: true,
   };
   let opts = {
@@ -88,6 +88,8 @@ module.exports = function (eleventyConfig) {
     "md",
     markdownIt(options).use(markdownItAnchor, opts)
   );
+
+  eleventyConfig.addWatchTarget("./src/");
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
