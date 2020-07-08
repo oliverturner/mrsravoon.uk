@@ -40,6 +40,8 @@ p {
 }
 
 a {
+  transition: 0.3s background-color;
+
   color: inherit;
   text-decoration: none;
 }
@@ -164,10 +166,11 @@ h3 {
   }
 
   & p a {
-    text-decoration: underline dotted;
+    text-decoration: underline;
 
     &:hover {
       background-color: khaki;
+      text-decoration: none;
     }
   }
 
