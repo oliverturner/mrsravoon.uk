@@ -7,14 +7,14 @@ eleventyNavigation:
   key: About
   order: 1
 ---
-For many, the acquaintance with MRS RAVOON came via John Julius Norwich in one of his wonderful *[Christmas Crackers](https://johnsandoe.com/product/the-ultimate-christmas-cracker/)*. There, he credited fellow commonplace compiler [Linda Kelly](https://oldsite.johnsandoe.com/product/consolations-a-commonplace-book/) with the discovery before introducing the author, the peculiarly obscure Paul Dehn.
+For many, the acquaintance with MRS RAVOON comes via John Julius Norwich and his wonderful *[Christmas Crackers](https://johnsandoe.com/product/the-ultimate-christmas-cracker/)*. There, he credits fellow commonplace compiler [Linda Kelly](https://oldsite.johnsandoe.com/product/consolations-a-commonplace-book/) with the revelation before introducing the author, the peculiarly obscure Paul Dehn.
 
 I say "peculiarly obscure", because considering the breadth of his accomplishments – Oscar-winning screenwriter, critic, librettist, soldier, spy and, of course, poet – it feels as though he ought to be far better known. Maybe the list was simply overwhelming: perhaps if all he had written was some of the most famous dialogue in film history he would be a household name.
 
 > “Do you expect me to talk?”
 > “No, Mr Bond. I expect you to die.”
 
-In a [charming review of Dehn's life and work](https://www.bnc.ox.ac.uk/downloads/brazen_nose_2008_9.pdf), Bernard Richards highlights Dehn's poetic range, contrasting the poem Philip Larkin selected for inclusion in *[The Oxford Book of Twentieth Century English Verse](https://blackwells.co.uk/bookshop/product/9780198121374?gC=5a105e8b&gclid=EAIaIQobChMIt5fflOm96gIVVOvtCh11Pgs8EAQYASABEgI26_D_BwE)*
+In an all-too-brief [review of Dehn's life and work](https://www.bnc.ox.ac.uk/downloads/brazen_nose_2008_9.pdf), Bernard Richards highlights Dehn's poetic range, contrasting the poem Philip Larkin selected for inclusion in *[The Oxford Book of Twentieth Century English Verse](https://blackwells.co.uk/bookshop/product/9780198121374?gC=5a105e8b&gclid=EAIaIQobChMIt5fflOm96gIVVOvtCh11Pgs8EAQYASABEgI26_D_BwE)*
 
 > ### Armistice
 >
