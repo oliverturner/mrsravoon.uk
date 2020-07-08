@@ -7,41 +7,61 @@ eleventyNavigation:
   key: About
   order: 1
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews.
-Iterative approaches to corporate strategy foster collaborative thinking to
-further the overall value proposition. Organically grow the holistic world view
-of disruptive innovation via workplace diversity and empowerment.
+For many, I imagine, an acquaintance with MRS RAVOON will have been via John Julius Norwich in one of his wonderful [_Christmas Crackers_](https://johnsandoe.com/product/the-ultimate-christmas-cracker/). In it, he credits fellow commonplace compiler [Linda Kelly](https://oldsite.johnsandoe.com/product/consolations-a-commonplace-book/) with the discovery before introducing the author, the peculiarly obscure Paul Dehn.
 
-## Our services
+I say "peculiarly obscure", because considering the breadth of his accomplishments – Oscar-winning screenwriter, critic, librettist, soldier, spy and, of course, poet – it feels as though he ought to be far better known. Maybe the list was simply overwhelming: perhaps if all he had written was some of the most famous dialogue in film history he would be a household name.
 
-Bring to the table win-win survival strategies to ensure proactive domination.
-At the end of the day, going forward, a new normal that has evolved from
-generation X is on the runway heading towards a streamlined cloud solution. User
-generated content in real-time will have multiple touchpoints for offshoring.
-Organically grow the holistic world view of disruptive innovation via workplace
-diversity and empowerment.
+> “Do you expect me to talk?”
+> “No, Mr Bond. I expect you to die.”
 
-### Blue-sky thinking
+For an idea of Dehn's poetic range, contrast the poem of his Philip Larkin selected for inclusion in [_The Oxford Book of Twentieth Century English Verse_](https://blackwells.co.uk/bookshop/product/9780198121374?gC=5a105e8b&gclid=EAIaIQobChMIt5fflOm96gIVVOvtCh11Pgs8EAQYASABEgI26_D_BwE)
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to
-beta test. Override the digital divide with additional clickthroughs from
-DevOps. Nanotechnology immersion along the information highway will close the
-loop on focusing solely on the bottom line. Organically grow the holistic world
-view of disruptive innovation via workplace diversity and empowerment.
+> ### Armistice
+> It is finished. The enormous dust-cloud over Europe 
+> Lifts like a million swallows; and a light,
+> Drifting in craters, touches the quiet dead.
 
-#### Management frameworks
+> Now, at the bugle’s hour, before the blood 
+> Cakes in a clean wind on their marble faces, 
+> Making them monuments; before the sun,
 
-Podcasting operational change management inside of workflows to establish a
-framework. Taking seamless key performance indicators offline to maximise the
-long tail. Keeping your eye on the ball while performing a deep dive on the
-start-up mentality to derive convergence on cross-platform integration.
-Organically grow the holistic world view of disruptive innovation via workplace
-diversity and empowerment.
+> Hung like a medal on the smoky noon,
+> Whitens the bone that feeds the earth; before 
+> Wheat-ear springs green again, in the green spring
 
-##### Regulatory convergence
+> And they are bread in the bodies of the young:
+> Be strong to remember how the bread died, screaming; 
+> Gangrene was corn, and monuments went mad.
 
-Collaboratively administrate empowered markets via plug-and-play networks.
-Dynamically procrastinate B2C users after installed base benefits. Dramatically
-visualize customer directed convergence without revolutionary ROI. Organically
-grow the holistic world view of disruptive innovation via workplace diversity
-and empowerment.
+with this, from his 1961 Edward-Gorey illustrated anthology _Quake, Quake, Quake_ (which, as the subtitle "A Leaden Treasury of English Verse" portends, is a light-hearted rumination on impending nuclear extinction)
+
+> ### A Game of Consequences
+> Coffee-cups cool on the Vicar’s harmonium,
+> Clever guests giggle and duffers despond. 
+> Soft as the patter of mouse-feet, the whisper 
+> Of Eversharp Pencil on Basildon Bond.
+
+> Separate hands scribble separate phrases – 
+> Innocent, each, as the new-driven snow.
+> What will they spell, when the paper’s unfolded? 
+> Lucifer, only, and Belial know.
+
+> ‘Ready, Miss Montague? Come, Mr Jellaby!’ 
+> (Peek at your papers and finger your chins) 
+> ‘Shy, Mr. Pomfret? You’d rather the Vicar...? 
+> Oh, good for the Vicar!’ The Vicar begins:
+
+> ‘FAT MR. POMFRET met FROWSTY MISS MONTAGUE 
+> Under the BACK SEAT IN JELLABY’S CART.
+> He said to her: WILL YOU DO WHAT I WANT TO YOU? 
+> She said to him: THERE’S A SONG IN MY HEART.’
+
+> What was the Consequence? What did the World say? 
+> Hist, in the silence, to Damocles’ sword!
+> Today Mr Pomfret has left for Karachi
+> And little Miss Montague screams in her ward.
+
+Where the first allows its horror to unfurl with an elegiac cadence, in the second we canter dactylically towards its ghastly conclusion with the energy and brio reprised in MRS RAVOON.
+
+![Quake, Quake, Quake jacket illustration](/static/img/quake-quake-quake.jpg)
+

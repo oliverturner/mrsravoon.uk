@@ -8,4 +8,4 @@ eleventyNavigation:
   key: Report!
   order: 3
 ---
-If you have survived an encounter with MRS RAVOON you may make a report in the standard fashion:
+If you too have survived an encounter with MRS RAVOON you may make a report in the standard fashion:

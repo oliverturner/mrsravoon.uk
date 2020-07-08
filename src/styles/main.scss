@@ -44,35 +44,6 @@ a {
   text-decoration: none;
 }
 
-/* Post Tags */
-a[rel="tag"],
-a[rel="tag"]:visited {
-  display: inline-block;
-  vertical-align: text-top;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.625em;
-  padding: 0 0.5em;
-  line-height: 2em;
-  height: 2em;
-  border: 1px solid var(--secondary);
-  background-color: var(--secondary);
-  color: var(--primary);
-  border-radius: 0.25em;
-  text-decoration: none;
-  margin: 0 0.5em 0.5em 0;
-}
-
-a[rel="tag"]:hover {
-  border: 1px solid var(--primary);
-  background-color: var(--primary);
-  color: var(--secondary);
-}
-
-a[rel="tag"]:last-child {
-  margin-right: 0;
-}
-
 button {
   border: none;
   cursor: pointer;
@@ -101,14 +72,16 @@ h4,
   letter-spacing: var(--spacing);
 
   & > span {
-    display: block;
-
     font-size: 0.5em;
     font-variant: normal;
     font-style: italic;
     font-family: Georgia, "Times New Roman", Times, serif;
     text-transform: lowercase;
     letter-spacing: initial;
+
+    &.block {
+      display: block;
+    }
   }
 }
 
@@ -179,12 +152,9 @@ h3 {
   }
 }
 
-.main,
-.main__inner {
-  padding: 1rem;
-}
-
 .main {
+  padding: 1rem;
+
   & p {
     margin: 0;
   }
@@ -193,27 +163,43 @@ h3 {
     margin-top: 1rem;
   }
 
+  & p a {
+    text-decoration: underline dotted;
+
+    &:hover {
+      background-color: khaki;
+    }
+  }
+
+  & p img {
+    display: block;
+    margin: auto;
+  }
+
   @media (min-width: 768px) {
     padding: 1rem 0;
   }
 }
 
 .main__inner {
-  [data-current="about"] & {
-    padding: 0;
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    margin: 0;
   }
 }
 
 .footer {
   padding: 1em;
   font-size: smaller;
+  text-align: center;
 }
 
 .hero {
   margin: 0;
 
   @media (min-width: 768px) {
-    max-width: 50%;
+    max-width: 40%;
     float: left;
     margin: 0 1rem 0 0;
   }
@@ -222,19 +208,35 @@ h3 {
     margin: 0;
     padding: 0.5rem;
     font-size: smaller;
+    line-height: 1.4rem;
   }
 }
 
 /* Posts List */
-article {
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-  border-bottom: 1px solid var(--secondary);
+.sighting {
+  padding: 1rem 0;
+
+  & + & {
+    border-top: 1px dotted var(--chrome-bg);
+  }
 }
 
-main > section > article > * {
-  margin-top: 0;
-  margin-bottom: 0.5em;
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  margin: 0.5rem 0.5rem 0 0;
+  border-radius: 3px;
+  padding: 0.125rem 0.25rem;
+  background-color: var(--chrome-highlight);
+  color: var(--chrome-text);
+
+  &:hover {
+    background-color: var(--chrome-bg);
+  }
 }
 
 /* Contact Form */
