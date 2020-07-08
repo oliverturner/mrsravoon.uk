@@ -14,7 +14,7 @@ I say "peculiarly obscure", because considering the breadth of his accomplishmen
 > “Do you expect me to talk?”
 > “No, Mr Bond. I expect you to die.”
 
-In an all-too-brief [review of Dehn's life and work](https://www.bnc.ox.ac.uk/downloads/brazen_nose_2008_9.pdf), Bernard Richards highlights Dehn's poetic range, contrasting the poem Philip Larkin selected for inclusion in *[The Oxford Book of Twentieth Century English Verse](https://blackwells.co.uk/bookshop/product/9780198121374?gC=5a105e8b&gclid=EAIaIQobChMIt5fflOm96gIVVOvtCh11Pgs8EAQYASABEgI26_D_BwE)*
+In a tantalisingly brief [review of Dehn's life and work](https://www.bnc.ox.ac.uk/downloads/brazen_nose_2008_9.pdf), Bernard Richards highlights Dehn's poetic range, contrasting the poem Philip Larkin selected for inclusion in *[The Oxford Book of Twentieth Century English Verse](https://blackwells.co.uk/bookshop/product/9780198121374?gC=5a105e8b&gclid=EAIaIQobChMIt5fflOm96gIVVOvtCh11Pgs8EAQYASABEgI26_D_BwE)*
 
 > ### Armistice
 >
