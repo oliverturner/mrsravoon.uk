@@ -5,7 +5,7 @@ date: 2020-07-08T21:14:31.527Z
 permalink: /
 eleventyNavigation:
   order: 0
-  key: home
+  key: Home
 ---
 # Alternative Endings <span class="block">to an</span> Unwritten Ballad
 
