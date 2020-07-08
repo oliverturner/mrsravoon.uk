@@ -61,7 +61,7 @@ with this, from his 1961 Edward-Gorey illustrated anthology _Quake, Quake, Quake
 > Today Mr Pomfret has left for Karachi
 > And little Miss Montague screams in her ward.
 
-Where the first allows its horror to unfurl with an elegiac cadence, in the second we canter dactylically towards its ghastly conclusion with the energy and brio reprised in MRS RAVOON.
+Where the first allows its horror to unfurl with an elegiac cadence, in the second we gallop dactylically towards its unfortunate conclusion with the energy and brio reprised in MRS RAVOON.
 
 ![Quake, Quake, Quake jacket illustration](/static/img/quake-quake-quake.jpg)
 
