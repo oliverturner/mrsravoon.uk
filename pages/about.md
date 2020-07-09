@@ -7,14 +7,14 @@ eleventyNavigation:
   key: About
   order: 1
 ---
-For many, the acquaintance with MRS RAVOON comes via John Julius Norwich and his wonderful *[Christmas Crackers](https://johnsandoe.com/product/the-ultimate-christmas-cracker/)*. There, he credits fellow commonplace compiler [Linda Kelly](https://oldsite.johnsandoe.com/product/consolations-a-commonplace-book/) with the revelation before introducing the author, the peculiarly obscure Paul Dehn.
+Like many, my acquaintance with MRS RAVOON comes via John Julius Norwich and his wonderful *[Christmas Crackers](https://johnsandoe.com/product/the-ultimate-christmas-cracker/)*. There, he credits fellow commonplace compiler [Linda Kelly](https://oldsite.johnsandoe.com/product/consolations-a-commonplace-book/) with the revelation before introducing the author, the peculiarly obscure Paul Dehn.
 
-I say "peculiarly obscure", because considering the breadth of his accomplishments – Oscar-winning screenwriter, critic, librettist, soldier, spy and, of course, poet – it feels as though he ought to be far better known. Maybe the list was simply overwhelming: perhaps if all he had written was some of the most famous dialogue in film history he would be a household name.
+I say "peculiarly obscure", because considering the breadth of his accomplishments – screenwriter, critic, librettist, soldier, spy and, of course, poet – he ought to be far better known. It's not as though he dallied in these areas: as a screenwriter he won both an Oscar and a BAFTA; as a critic he wrote for three national newspapers; his librettos were performed before international audiences; as a soldier he attained the rank of major; as a spy he trained alongside Ian Fleming and Kim Philby; as a poet Philip Larkin selected his _Armistice_ for inclusion in *[The Oxford Book of Twentieth Century English Verse](https://blackwells.co.uk/bookshop/product/9780198121374?gC=5a105e8b&gclid=EAIaIQobChMIt5fflOm96gIVVOvtCh11Pgs8EAQYASABEgI26_D_BwE)*. Maybe the list was simply overwhelming: perhaps if he had restricted himself to penning one of the most famous dialogues in film history he would be a household name.
 
 > “Do you expect me to talk?”
 > “No, Mr Bond. I expect you to die.”
 
-In a tantalisingly brief [review of Dehn's life and work](https://www.bnc.ox.ac.uk/downloads/brazen_nose_2008_9.pdf), Bernard Richards highlights Dehn's poetic range, contrasting the poem Philip Larkin selected for inclusion in *[The Oxford Book of Twentieth Century English Verse](https://blackwells.co.uk/bookshop/product/9780198121374?gC=5a105e8b&gclid=EAIaIQobChMIt5fflOm96gIVVOvtCh11Pgs8EAQYASABEgI26_D_BwE)*
+In a tantalisingly brief [review of Dehn's life and work](https://www.bnc.ox.ac.uk/downloads/brazen_nose_2008_9.pdf), Bernard Richards highlights Dehn's poetic range, contrasting this
 
 > ### Armistice
 >
@@ -66,3 +66,7 @@ with this, from his 1961 Edward-Gorey illustrated anthology *Quake, Quake, Quake
 Where the first allows its horror to unfurl with an elegiac cadence, in the second we gallop dactylically towards its unfortunate conclusion with the energy and brio reprised in MRS RAVOON.
 
 ![Quake, Quake, Quake jacket illustration](/static/img/quake-quake-quake.jpg)
+
+---
+
+Oliver Turner, London 2020

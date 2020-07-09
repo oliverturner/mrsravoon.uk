@@ -1,10 +1,10 @@
 <section class="sightings">
 	{% for post in postslist %}
 		<article class="sighting" {% if post.url == url %} data-current="current item"{% endif %}>
-			<h3>
-				<a href="{{ post.url | url }}">{{ post.data.title }}</a> 
-				<span>by</span> 
-				<a href="/authors/{{ post.data.author | slug }}/">{{ post.data.author }}</a>
+			<h3 class="sighting__title">
+				<a class="sighting__title__link" href="{{ post.url | url }}">{{ post.data.title }}</a> 
+				<span>by</span>
+				<small>{{ post.data.author }}</small>
 			</h3>
 			{% if post.data.summary %}
 				<p>

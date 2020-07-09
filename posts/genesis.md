@@ -1,8 +1,8 @@
 ---
-title: Genesis
+title: From The Fern on the Rock
 author: Paul Dehn
-summary: The original stanzas from "The Fern on the Rock"
-order: 0
+summary: The original stanzas
+date: 1965-01-01
 tags:
   - baboon
   - balloon

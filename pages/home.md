@@ -11,4 +11,4 @@ eleventyNavigation:
 
 In 1965 Paul Dehn published *The Fern on the Rock* and introduced the world to Mrs. Ravoon. Ever since this début, the widespread impulse to catalogue her remarkable adventures has been as flame unto moth.
 
-We strongly encourage you to [singe your wings](/report): this site aims to be a durable new home for our deathless heroine and a repository for reports of [further sightings](/sightings).
+We strongly encourage you to singe your wings and [report](/report) your own encounter: this site aims to be a durable new home for our deathless heroine and a repository for [further sightings](/sightings).
