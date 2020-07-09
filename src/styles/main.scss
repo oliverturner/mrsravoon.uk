@@ -214,6 +214,11 @@ h3 {
     margin: 0 1rem 0.5rem 0;
   }
 
+  & > img {
+    width: 100%;
+    object-fit: cover;
+  }
+
   & > figcaption {
     margin: 0;
     padding: 0.5rem;
