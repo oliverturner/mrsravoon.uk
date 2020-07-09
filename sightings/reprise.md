@@ -2,6 +2,7 @@
 title: A reprise
 author: Paul Dehn
 summary: Additional material from the author himself
+date: 1966-01-01
 tags:
   - harpoon
 ---
