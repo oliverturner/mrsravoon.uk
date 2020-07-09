@@ -14,7 +14,7 @@ I say "peculiarly obscure", because considering the breadth of his accomplishmen
 > “Do you expect me to talk?”
 > “No, Mr Bond. I expect you to die.”
 
-In his series on Brasenose alumni Bernard Richards gives a tantalisingly brief [review of Dehn's life and work](https://www.bnc.ox.ac.uk/downloads/brazen_nose_2008_9.pdf) and highlights his poetic range, contrasting this
+In his series on Brasenose alumni Bernard Richards gives a tantalisingly brief [review of Dehn's life and work](https://www.bnc.ox.ac.uk/downloads/brazen_nose_2008_9.pdf) and highlights his poetic range, contrasting Larkin's pick
 
 > ### Armistice
 >
