@@ -14,7 +14,7 @@ I say "peculiarly obscure", because considering the breadth of his accomplishmen
 > “Do you expect me to talk?”
 > “No, Mr Bond. I expect you to die.”
 
-In a tantalisingly brief [review of Dehn's life and work](https://www.bnc.ox.ac.uk/downloads/brazen_nose_2008_9.pdf), Bernard Richards highlights Dehn's poetic range, contrasting this
+In his series on Brasenose College alumni Bernard Richards gives a tantalisingly brief [review of Dehn's life and work](https://www.bnc.ox.ac.uk/downloads/brazen_nose_2008_9.pdf) and highlights Dehn's poetic range, contrasting this
 
 > ### Armistice
 >
@@ -63,6 +63,8 @@ with this, from his 1961 Edward-Gorey illustrated anthology *Quake, Quake, Quake
 > Today Mr Pomfret has left for Karachi
 > And little Miss Montague screams in her ward.
 
-Where the first allows its horror to unfurl with an elegiac cadence, in the second we gallop dactylically towards its unfortunate conclusion with the energy and brio reprised in MRS RAVOON.
+Where the first allows its horror to unfurl with an elegiac cadence, in the second we gallop dactylically towards its unfortunate conclusion with the energy and brio reprised in his verses on MRS RAVOON.
+
+Dehn was reportedly bemused by the adoption of his heroine as a part of the commons, but in penning his own [retrospective contribution](/sightings/a-reprise/) he seems to have given his imprimatur. We hope that more will [heed his encouragement](/report/).
 
 ![Quake, Quake, Quake jacket illustration](/static/img/quake-quake-quake.jpg)
