@@ -8,6 +8,8 @@
   --text-color-secondary: #777;
   --text-color-primary: #000;
 
+  --img-w: 360px;
+
   --font-body: "Gill Sans", "Avenir", "Avenir Next", -apple-system,
     BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-display: Georgia, "Times New Roman", Times, serif;
@@ -60,11 +62,28 @@ button {
 img {
   max-width: 100%;
   height: auto;
+
+  [data-current="post"] & {
+    max-width: var(--img-w);
+  }
 }
 
 .container {
   max-width: 37.5rem;
   margin: auto;
+}
+
+audio {
+  display: block;
+  width: 100%;
+  max-width: var(--img-w);
+  margin: auto;
+  filter: saturate(70%) grayscale(1) contrast(100%) invert(12.5%);
+  outline: none;
+
+  &:focus {
+    filter: invert(100%);
+  }
 }
 
 h1,
@@ -251,7 +270,7 @@ h3 {
   flex-wrap: wrap;
 
   margin-top: 0.5rem;
-  
+
   [data-current="post"] & {
     margin: 2rem 0;
     border-top: 1px dotted currentColor;
