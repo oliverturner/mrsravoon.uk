@@ -14,4 +14,4 @@ Then it sat up and leered: it was... MRS RAVOON.
 Below the salt Channel they're drinking champagne
 And ministers jostle to board the first train.
 Emergency bells ring in French and Walloon,
-For the on the buffers squats... MRS RAVOON.
+For there on the buffers squats... MRS RAVOON.
