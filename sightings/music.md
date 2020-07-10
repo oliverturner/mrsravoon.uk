@@ -1,5 +1,5 @@
 ---
-title: Music interpretations
+title: Musical interpretations
 summary: Not so much sightings as hearings
 author: Various
 date: 1976-01-01
