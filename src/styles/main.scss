@@ -62,28 +62,11 @@ button {
 img {
   max-width: 100%;
   height: auto;
-
-  [data-current="post"] & {
-    max-width: var(--img-w);
-  }
 }
 
 .container {
   max-width: 37.5rem;
   margin: auto;
-}
-
-audio {
-  display: block;
-  width: 100%;
-  max-width: var(--img-w);
-  margin: auto;
-  filter: saturate(70%) grayscale(1) contrast(100%) invert(12.5%);
-  outline: none;
-
-  &:focus {
-    filter: invert(100%);
-  }
 }
 
 h1,
@@ -295,6 +278,47 @@ h3 {
     outline: none;
     background-color: var(--background);
     color: var(--chrome-bg);
+  }
+}
+
+.audio {
+  @media (min-width: 640px) {
+    display: flex;
+  }
+
+  & + & {
+    margin-top: 1rem;
+  }
+}
+
+.audio__img {
+  display: block;
+  max-width: 450px;
+  margin: auto;
+  object-fit: contain;
+
+  @media (min-width: 640px) {
+    max-width: 300px;
+  }
+}
+
+.audio__desc {
+  margin: 1rem 0 0 0;
+
+  @media (min-width: 640px) {
+    margin: 0 0 0 1rem;
+  }
+}
+
+.audio__media {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  filter: saturate(70%) grayscale(1) contrast(100%) invert(12.5%);
+  outline: none;
+
+  &:focus {
+    filter: invert(100%);
   }
 }
 
