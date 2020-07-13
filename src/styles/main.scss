@@ -284,6 +284,7 @@ h3 {
 .audio {
   @media (min-width: 640px) {
     display: flex;
+    align-items: flex-start;
   }
 
   & + & {
