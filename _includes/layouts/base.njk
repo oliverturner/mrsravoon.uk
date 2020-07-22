@@ -17,4 +17,11 @@
 
 	</body>
 
+	<script type="module" src="/lib/main.js"></script>
+	<script>
+		var audioEls = document.getElementsByTagName("audio");
+		for (var el of audioEls) {
+			el.setAttribute("controls", "true");
+		}
+	</script>
 </html>
