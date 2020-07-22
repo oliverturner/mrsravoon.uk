@@ -1,5 +1,6 @@
 ---
 title: dotcalm
+date: 2019-07-22T12:34:00.000Z
 author: Craig A. Smith
 summary: A sighting by the maintainer of the sadly defunct mrsravoon.com
 tags:
