@@ -4,7 +4,6 @@ date: 2020-07-22T10:21:54.924Z
 author: Madame Zagrebova
 summary: A grisly sighting from a mysterious contributor
 tags:
-  - sighting
   - prune
   - flewn
   - spittoon
