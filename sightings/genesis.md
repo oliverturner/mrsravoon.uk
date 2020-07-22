@@ -1,8 +1,9 @@
 ---
-title: From The Fern on the Rock
-author: Paul Dehn
-summary: The original stanzas
+title: The Birth of a Legend
 date: 1965-01-01
+author: Paul Dehn
+summary: The original stanzas, first anthologised in _For Love and Money_ (1955)
+  and republished a decade later in _The Fern on the Rock_ (1965)
 tags:
   - baboon
   - balloon
@@ -10,7 +11,6 @@ tags:
   - moon
   - noon
   - rune
-  - tune
 ---
 I stole through the dungeons, while everyone slept, 
 Till I came to the cage where the Monster was kept.
@@ -41,12 +41,3 @@ Facing the fens, I looked back from the shore
 Where all had been empty a moment before;
 And there, by the light of the Lincolnshire moon,
 Immense on the marshes, stood... MRS RAVOON!
-
----
-
-### Possibly apocryphal...
-
-I went to an amateur butcher I know
-For the gut of a cat for my violin bow,
-But I never imagined I'd play my next tune
-On the shuddering entrails of MRS RAVOON.
