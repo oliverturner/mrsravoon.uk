@@ -13,7 +13,6 @@ Where toads floated fatly, foaming like porter\
 Much flotsam and jetsam and what looked like prune\
 Be-littered the surface near MRS RAVOON
 
-\
 I spied a faint light from the wreck of a shack\
 Whence I hastened at speed without looking back\
 Alas and alack 'twas not the place to have flewn\
