@@ -1,7 +1,7 @@
 ---
 title: Zounds… it's Zagrebova!
 date: 2020-07-22T10:21:54.924Z
-author: Paul Dehn
+author: Madame Zagrebova
 summary: A grisly sighting from a mysterious contributor
 tags:
   - sighting
