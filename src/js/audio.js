@@ -1,7 +1,3 @@
-function enableControls() {
-  console.log("enableControls");
-}
-
 /**
  * Return a play/pause control
  *
@@ -54,8 +50,6 @@ function createProgressBar(audioEl) {
   /**
    * Update the UI to reflect progress
    *
-   * @param   {MediaStreamEvent}  event
-   *
    * @return  {void}
    */
   function onProgress() {
@@ -88,8 +82,6 @@ export function audio(audioEl) {
 
   controlsEl.appendChild(playBtn);
   controlsEl.appendChild(progressBar);
-
-  audioEl.addEventListener("canplay", enableControls);
 
   try {
     // audioEl.removeAttribute("controls");
