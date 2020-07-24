@@ -69,10 +69,12 @@
     "lint:css": "stylelint ./src/styles/**/*.scss",
     "lint:js": "eslint ./src/js/**/*.js",
     "lint": "run-s lint:*",
-    "build": "npx eleventy",
-    "debug": "DEBUG=* npx eleventy",
-    "watch": "npx eleventy --watch",
-    "dev": "npx eleventy --serve",
-    "rollup:dev": "rollup -c ./tools/rollup.config.js -w"
+    "rollup": "rollup -c ./tools/rollup.config.js",
+    "build:eleventy": "npx eleventy",
+    "build:js": "npm run rollup",
+    "build": "run-p build:*",
+    "dev:js": "npm run rollup -- -w",
+    "dev:eleventy": "npx eleventy --serve",
+    "dev": "run-p dev:*"
   }
 }
