@@ -19,6 +19,21 @@ module.exports = function (eleventyConfig) {
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
 
+  /* Markdown Plugins */
+  let markdownIt = require("markdown-it");
+  let markdownItAnchor = require("markdown-it-anchor");
+  let mdOptions = {
+    html: true,
+    breaks: true,
+    linkify: true,
+  };
+  const mdi = markdownIt(mdOptions);
+
+  // Inline Markdown rendering
+  eleventyConfig.addFilter("mdi", (text) => {
+    return mdi.render(text);
+  });
+
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
@@ -72,22 +87,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_includes/assets/");
 
-  /* Markdown Plugins */
-  let markdownIt = require("markdown-it");
-  let markdownItAnchor = require("markdown-it-anchor");
-  let options = {
-    html: true,
-    breaks: true,
-    linkify: true,
-  };
   let opts = {
     permalink: false,
   };
 
-  eleventyConfig.setLibrary(
-    "md",
-    markdownIt(options).use(markdownItAnchor, opts)
-  );
+  eleventyConfig.setLibrary("md", mdi.use(markdownItAnchor, opts));
 
   eleventyConfig.addWatchTarget("./src/");
 
