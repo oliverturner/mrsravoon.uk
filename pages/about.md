@@ -7,7 +7,9 @@ eleventyNavigation:
   key: About
   order: 1
 ---
-Like many, my acquaintance with MRS RAVOON came via John Julius Norwich and his wonderful *[Christmas Crackers](https://johnsandoe.com/product/the-ultimate-christmas-cracker/)*. There, he credited fellow commonplace compiler [Linda Kelly](https://oldsite.johnsandoe.com/product/consolations-a-commonplace-book/) with introducing him, before presenting the author, the peculiarly obscure Paul Dehn.
+{% import "components/macros.njk" as macros with context %}
+
+Like many, my acquaintance with {{ macros.ravoon() }} came via John Julius Norwich and his wonderful *[Christmas Crackers](https://johnsandoe.com/product/the-ultimate-christmas-cracker/)*. There, he credited fellow commonplace compiler [Linda Kelly](https://oldsite.johnsandoe.com/product/consolations-a-commonplace-book/) with introducing him, before presenting the author, the peculiarly obscure Paul Dehn.
 
 I say "peculiarly obscure", because considering the breadth of his accomplishments – screenwriter, critic, librettist, soldier, spy and, of course, poet – he ought to be far better known. Indeed, it's strange that Norwich makes no mention of them: it's not as though he dallied in these areas. As a screenwriter he won both an Oscar and a BAFTA; as a critic he wrote for three national newspapers; as a librettist his works were performed before international audiences; as a soldier he attained the rank of major; as a spy he trained alongside Ian Fleming and Kim Philby and conducted missions in occupied France; as a poet, Philip Larkin selected his _Armistice_ for inclusion in *[The Oxford Book of Twentieth Century English Verse](https://blackwells.co.uk/bookshop/product/9780198121374?gC=5a105e8b&gclid=EAIaIQobChMIt5fflOm96gIVVOvtCh11Pgs8EAQYASABEgI26_D_BwE)*. Maybe the list was simply overwhelming: perhaps if he had restricted himself to penning one of the most famous dialogues in film history he would be a household name.
 
@@ -63,7 +65,7 @@ with this, from his 1961 Edward Gorey-illustrated anthology *Quake, Quake, Quake
 > Today Mr Pomfret has left for Karachi
 > And little Miss Montague screams in her ward.
 
-Where the first allows its horror to unfurl with an elegiac cadence, in the second we gallop dactylically towards its unfortunate conclusion with the energy and brio reprised in his verses on MRS RAVOON.
+Where the first allows its horror to unfurl with an elegiac cadence, in the second we gallop dactylically towards its unfortunate conclusion with the energy and brio reprised in his verses on {{ macros.ravoon() }}.
 
 Dehn was reportedly bemused by the adoption of his heroine as a part of the commons, but in penning his own [retrospective contribution](/sightings/a-reprise/) he seems to have given his imprimatur. We hope that more will [heed his encouragement](/report/).
 

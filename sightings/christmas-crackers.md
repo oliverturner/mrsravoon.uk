@@ -7,12 +7,14 @@ tags:
   - tutankhamun
   - walloon
 ---
+{% import "components/macros.njk" as macros with context %}
+
 A torch flickered, deep in the Valley of Kings,
 "I see", whispered Carter, "oh, wonderful things!"
 "Do you think," gasped Carnarvon, "It's Tutankhamun?"
-Then it sat up and leered: it was... MRS RAVOON.
+Then it sat up and leered: it was... {{ macros.ravoon() }}.
 
 Below the salt Channel they're drinking champagne
 And ministers jostle to board the first train.
 Emergency bells ring in French and Walloon,
-For there on the buffers squats... MRS RAVOON.
+For there on the buffers squats... {{ macros.ravoon() }}.

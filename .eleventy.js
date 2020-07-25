@@ -27,11 +27,11 @@ module.exports = function (eleventyConfig) {
     breaks: true,
     linkify: true,
   };
-  const mdi = markdownIt(mdOptions);
+  const md = markdownIt(mdOptions);
 
   // Inline Markdown rendering
-  eleventyConfig.addFilter("mdi", (text) => {
-    return mdi.render(text);
+  eleventyConfig.addFilter("md", (text) => {
+    return md.render(text);
   });
 
   // Date formatting (human readable)
@@ -72,12 +72,10 @@ module.exports = function (eleventyConfig) {
     return content;
   });
 
-  // Universal slug filter strips unsafe chars from URLs
-  eleventyConfig.addFilter("slugify", function (str) {
+  eleventyConfig.addFilter("slug", function (str) {
     return slugify(str, {
       lower: true,
-      replacement: "-",
-      remove: /[*+~.·,()'"`´%!?¿:@]/g,
+      remove: /[*+~.·,()'"`´%!?¿:@…]/g,
     });
   });
 
@@ -91,7 +89,7 @@ module.exports = function (eleventyConfig) {
     permalink: false,
   };
 
-  eleventyConfig.setLibrary("md", mdi.use(markdownItAnchor, opts));
+  eleventyConfig.setLibrary("md", md.use(markdownItAnchor, opts));
 
   eleventyConfig.addWatchTarget("./src/");
 
@@ -104,7 +102,7 @@ module.exports = function (eleventyConfig) {
     // This is only used for URLs (it does not affect your file structure)
     pathPrefix: "/",
 
-    markdownTemplateEngine: "liquid",
+    markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     dir: {

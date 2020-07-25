@@ -64,6 +64,15 @@ img {
   height: auto;
 }
 
+blockquote {
+  margin-inline-start: 1.5rem;
+  margin-inline-end: 0;
+
+  & + & {
+    margin-block-start: 1.5rem;
+  }
+}
+
 .container {
   max-width: 37.5rem;
   margin: auto;
@@ -99,6 +108,9 @@ h4,
 h1 {
   --spacing: 0.2rem;
   --size: 1.6rem;
+
+  text-align: center;
+  text-transform: initial;
 }
 
 h2 {
@@ -109,11 +121,23 @@ h2 {
 h3 {
   --spacing: 0.1rem;
   --size: 1.2rem;
+
+  margin-bottom: 0.75rem;
 }
 
 .chrome {
   background: var(--chrome-bg);
   color: var(--chrome-text);
+}
+
+.ravoon {
+  display: inline;
+  font-weight: normal;
+  font-variant: small-caps;
+
+  & > span {
+    text-transform: capitalize;
+  }
 }
 
 .header__nav {
@@ -170,7 +194,7 @@ h3 {
     margin: 0;
   }
 
-  & p + p {
+  & * + p {
     margin-top: 1rem;
   }
 
@@ -205,6 +229,23 @@ h3 {
   padding: 1em;
   font-size: smaller;
   text-align: center;
+}
+
+.logo {
+  padding: 2vh;
+  text-align: center;
+
+  & svg {
+    max-width: 250px;
+  }
+
+  & .bg {
+    fill: var(--chrome-text);
+  }
+
+  & .letter {
+    fill: var(--chrome-bg);
+  }
 }
 
 .hero {
@@ -282,39 +323,27 @@ h3 {
 }
 
 .audio {
-  @media (min-width: 640px) {
-    display: flex;
-    align-items: flex-start;
-  }
+  margin-top: 1rem;
 
-  & + & {
-    margin-top: 1rem;
+  @media (min-width: 640px) {
+    max-width: 300px;
+    // margin-inline: auto; <-- insufficient support as of 2020-07-25
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
 .audio__img {
   display: block;
-  max-width: 450px;
-  margin: auto;
+  max-width: 100%;
+  margin: 0 auto;
   object-fit: contain;
-
-  @media (min-width: 640px) {
-    max-width: 300px;
-  }
-}
-
-.audio__desc {
-  margin: 1rem 0 0 0;
-
-  @media (min-width: 640px) {
-    margin: 0 0 0 1rem;
-  }
 }
 
 .audio__media {
   display: block;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   filter: saturate(70%) grayscale(1) contrast(100%) invert(12.5%);
   outline: none;
 

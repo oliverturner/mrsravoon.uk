@@ -8,7 +8,7 @@
 			</h3>
 			{% if post.data.summary %}
 				<p>
-					{{ post.data.summary | mdi | safe }}
+					{{ post.data.summary | md | safe }}
 				</p>
 			{% endif %}
 			{% if post.data.tags %}

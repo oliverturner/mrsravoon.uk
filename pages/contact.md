@@ -8,4 +8,6 @@ eleventyNavigation:
   key: Report!
   order: 3
 ---
-If you too have survived an encounter with MRS RAVOON you may make a report in the standard fashion:
+{% import "components/macros.njk" as macros with context %}
+
+If you too have survived an encounter with {{ macros.ravoon() }} you may make a report in the standard fashion:
