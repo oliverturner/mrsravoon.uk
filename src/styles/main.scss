@@ -324,6 +324,9 @@ h3 {
 
 .audio {
   margin-top: 1rem;
+  padding: 0.5rem;
+  background: var(--chrome-bg);
+  color: var(--chrome-text);
 
   @media (min-width: 640px) {
     max-width: 300px;
@@ -338,12 +341,13 @@ h3 {
   max-width: 100%;
   margin: 0 auto;
   object-fit: contain;
-  
-  @media (min-width: 640px) {  
+
+  @media (min-width: 640px) {
     max-width: 300px;
   }
 }
 
+// If JS is running this element will be hidden  by te removal of the `controls` attribute
 .audio__media {
   display: block;
   width: 100%;
@@ -354,6 +358,26 @@ h3 {
   &:focus {
     filter: invert(100%);
   }
+}
+
+.audio__controls {
+  display: flex;
+  align-items: center;
+
+  margin-top: 0.5rem;
+}
+
+.audio__controls__playbtn {
+  flex: 0;
+}
+
+.audio__controls__progress {
+  flex: 1;
+  margin: 0 0.5rem;
+}
+
+.audio__controls__timestamp {
+  flex: 0;
 }
 
 /* Contact Form */

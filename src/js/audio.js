@@ -7,6 +7,7 @@
  */
 function createPlayBtn(audioEl) {
   const btn = document.createElement("button");
+  btn.className = "audio__controls__playbtn";
   btn.innerText = "play";
 
   /**
@@ -45,6 +46,7 @@ function createPlayBtn(audioEl) {
  */
 function createProgressBar(audioEl) {
   const progressBar = document.createElement("progress");
+  progressBar.className = "audio__controls__progress";
   progressBar.value = 0;
 
   /**
@@ -66,6 +68,35 @@ function createProgressBar(audioEl) {
   return progressBar;
 }
 
+function formatCurrentTime(currentTime) {
+  const hours = Math.floor(currentTime / 60 / 60);
+  const minutes = Math.floor(currentTime / 60) - hours * 60;
+  const seconds = Math.floor(currentTime) % 60;
+
+  return [hours, minutes, seconds]
+    .map((part) => part.toString().padStart(2, "0"))
+    .join(":");
+}
+
+function createTimestamp(audioEl) {
+  const timeStamp = document.createElement("span");
+  timeStamp.className = "audio__controls__timestamp";
+  timeStamp.innerText = "00:00:00";
+
+  /**
+   * Update the UI to reflect progress
+   *
+   * @return  {void}
+   */
+  function onProgress() {
+    timeStamp.innerText = formatCurrentTime(audioEl.currentTime);
+  }
+
+  audioEl.addEventListener("timeupdate", onProgress);
+
+  return timeStamp;
+}
+
 /**
  * Replace the <audio> element's default UI
  *
@@ -76,17 +107,24 @@ function createProgressBar(audioEl) {
 export function audio(audioEl) {
   const parentEl = audioEl.parentNode;
   const controlsEl = document.createElement("div");
+  controlsEl.className = "audio__controls";
 
   const playBtn = createPlayBtn(audioEl);
   const progressBar = createProgressBar(audioEl);
+  const timeStamp = createTimestamp(audioEl);
 
   controlsEl.appendChild(playBtn);
   controlsEl.appendChild(progressBar);
+  controlsEl.appendChild(timeStamp);
 
   try {
-    // audioEl.removeAttribute("controls");
+    audioEl.removeAttribute("controls");
     parentEl.appendChild(controlsEl);
-    console.log("hello audio", { audioEl, controlsEl });
+    console.log("hello audio", {
+      audioEl,
+      controlsEl,
+      duration: audioEl.duration,
+    });
   } catch (error) {
     console.log({ error });
   }
