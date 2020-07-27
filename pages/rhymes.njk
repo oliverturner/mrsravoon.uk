@@ -1,0 +1,15 @@
+{% set foo = collections.lol %}
+<script type="application/json" id="rhymes">
+{{ foo | json | safe }}
+</script>
+
+{% set tags = collections.taggedRhymes %}
+<script type="application/json" id="tags">
+{{ tags | json | safe }}
+</script>
+
+{# 
+<script type="application/json" id="rhymes">
+{{ rhymes | json | safe }}
+</script>
+ #}
