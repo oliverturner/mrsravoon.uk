@@ -7,10 +7,22 @@ const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
   // Unsorted items (in whatever order they were added)
-  eleventyConfig.addCollection("allMyContent", function (collectionApi) {
-    const data = collectionApi.getAll();
-    console.log(JSON.stringify(data, null, 2));
-    return null;
+  eleventyConfig.addCollection("taggedRhymes", function (collectionApi) {
+    const posts = collectionApi.getFilteredByTag("post");
+    let oons = [];
+    for (const post of posts) {
+      console.log(post.data.tags, Array.isArray(post.data.tags));
+      oons = oons.concat(post.data.tags);
+    }
+
+    const p = posts[0];
+    const { title, page, tags } = p.data;
+    console.log({ title, page, tags });
+
+    console.log({ oons });
+    console.log({ oons: new Set(oons.sort()) });
+
+    return new Map();
   });
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
