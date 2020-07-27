@@ -6,14 +6,15 @@ const slugify = require("slugify");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
+  // Unsorted items (in whatever order they were added)
+  eleventyConfig.addCollection("allMyContent", function (collectionApi) {
+    const data = collectionApi.getAll();
+    console.log(JSON.stringify(data, null, 2));
+    return null;
+  });
+
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-  // Configuration API: use eleventyConfig.addLayoutAlias(from, to) to add
-  // layout aliases! Say you have a bunch of existing content using
-  // layout: post. If you don’t want to rewrite all of those values, just map
-  // post to a new file like this:
-  // eleventyConfig.addLayoutAlias("post", "layouts/my_new_post_layout.njk");
 
   // Merge data instead of overriding
   // https://www.11ty.dev/docs/data-deep-merge/
