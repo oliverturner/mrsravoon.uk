@@ -6,7 +6,10 @@ const slugify = require("slugify");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 
 module.exports = function (eleventyConfig) {
-  // Unsorted items (in whatever order they were added)
+  eleventyConfig.addCollection("lol", function (collectionApi) {
+    return "lolololol";
+  });
+
   eleventyConfig.addCollection("taggedRhymes", function (collectionApi) {
     const posts = collectionApi.getFilteredByTag("post");
     let oons = [];
@@ -15,14 +18,16 @@ module.exports = function (eleventyConfig) {
       oons = oons.concat(post.data.tags);
     }
 
-    const p = posts[0];
-    const { title, page, tags } = p.data;
-    console.log({ title, page, tags });
+    // const p = posts[0];
+    // const { title, page, tags } = p.data;
+    // console.log({ title, page, tags });
 
-    console.log({ oons });
-    console.log({ oons: new Set(oons.sort()) });
+    // console.log({ oons });
+    // console.log({ oons:  });
 
-    return new Map();
+    // return new Map();
+
+    return [...new Set(oons.sort())];
   });
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
@@ -45,6 +50,11 @@ module.exports = function (eleventyConfig) {
   // Inline Markdown rendering
   eleventyConfig.addFilter("md", (text) => {
     return md.render(text);
+  });
+
+  // Inline Markdown rendering
+  eleventyConfig.addFilter("json", (data) => {
+    return JSON.stringify(data, null, 2);
   });
 
   // Date formatting (human readable)
