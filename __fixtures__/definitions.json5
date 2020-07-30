@@ -1,0 +1,110 @@
+{
+  hoon: {
+    phonetic: "huːn",
+    locale: "Australian/NZ informal",
+    type: "noun",
+    definition: "a lout or hooligan, especially a young man who drives recklessly",
+    example: "the whole family was wiped out because some drunken hoon had to drive his car.",
+  },
+  poon: {
+    phonetic: "puːn",
+    locale: "Australian informal",
+    type: "noun",
+    definition: "a simple or foolish person",
+    example: "what possessed her to shack up with a poon like you?",
+  },
+  bamoun: {
+    definition: "The Bamum, sometimes called Bamoum, Bamun, Bamoun, or Mum, are a Grassfields ethnic group of Cameroon with around 215,000 members."
+  },
+  gadroon: {
+    definition: "Gadrooning is a decorative motif consisting of convex curves in a series. In furniture and other decorative arts, it is an ornamental carved band of tapered, curving and sometimes alternating concave and convex sections, usually diverging obliquely either side of a central point, often with rounded ends vaguely reminiscent of flower petals. Gadrooning, derived from Roman sarcophagi (illustration) and other antiquities, was widely used during the Italian Renaissance, and in the classicising phases of 18th- and early 19th-century design."
+  },
+  tenoroon: {
+    definition: "The tenor bassoon or tenoroon is a member of the bassoon family of double reed woodwind instruments. Similarly to the alto bassoon, also called octave bassoon, it is relatively rare."
+  },
+  frigatoon: {
+    locale: "British English",
+    phonetic: "frɪɡəˈtuːn",
+    type: "noun",
+    definition: "a Venetian sailing ship with a square stern",
+  },
+  granfalloon: {
+    definition: "A granfalloon, in the fictional religion of Bokononism (created by Kurt Vonnegut in his 1963 novel Cat's Cradle), is defined as a 'false karass'. That is, it is a group of people who affect a shared identity or purpose, but whose mutual association is meaningless."
+  },
+  ducatoon: {
+    definition: "The ducaton, ducatone or ducatoon was a crown-sized silver coin of the 16th-18th centuries. The first ducaton-type coin was the scudo known as the 'ducatone da soldi cento' (of 100 soldi), issued by Charles V, Holy Roman Emperor, in Milan in 1551."
+  },
+  tetroon: {
+    definition: "A superpressure, constant-level balloon in the form of a tetrahedron that is used to obtain observations in the lower atmosphere."
+  },
+  puccoon: {
+    definition: "Lithospermum canescens, or the hoary puccoon is a perennial herb endemic to eastern North America. The plant has golden yellow flowers which bloom from April to May"
+  },
+  Puckoon: {
+    definition: "fictional Irish village of in the eponymous novel by Spike Milligan"
+  },
+  testoon: {
+    definition: "The English shilling was a silver coin of the Kingdom of England, when first introduced known as the testoon. It remained in circulation until it became the British shilling as the result of the Union of England and Scotland to form the Kingdom of Great Britain in 1707."
+  },
+  tahun: {
+    definition: "Javanese calendar."
+  },
+  spadroon: {
+    definition: "A spadroon is a light sword with a straight-edged blade, enabling both cut and thrust attacks. This English term first came into use in the early 18ᵗʰ century, though the type of sword it referred to was in common usage during the late 17ᵗʰ century."
+  },
+  simoun: {
+    phonetic: "sɪˈmuːm",
+    definition: "a hot, dry, dust-laden wind blowing in the desert, especially in Arabia."
+  },
+  shimbun: {
+    definition: "Japanese national newspaper"
+  },
+  shalloon: {
+    type: "noun",
+    phonetic: "shə-ˈlün",
+    definition: "shalloon (countable and uncountable, plural shalloons) A fabric of tightly woven wool, mainly used for the linings of articles of clothing. (historical) A band for tying the tail of a wig, made of such material. A material used as liner in artillery rounds between the casing and propellant or bursting charge."
+  },
+  balun: {
+    definition: "In Antenna Theory, a Balun is used to 'balance' unbalanced systems"
+  },
+  bradoon: {
+    definition: "a snaffle bit, which works in concert with a curb bit to make up the formidable double bridle."
+  },
+  cantoon: {
+    definition: "A cotton material with a fine cord on one side and a satiny surface on the other."
+  },
+  ceroon: {
+    definition: "A bale or package, covered or bound with hide"
+  },
+  cohune: {
+    definition: "A Central American palm whose nut is a valuable source of oil."
+  },
+  crampoon: {
+    definition: "A hinged pair of curved iron bars; used to raise heavy objects"
+  },
+  dahoon: {
+    definition: "A holly native to the southeastern coast of North America, in the United States from Virginia to southeast Texas, in Mexico in Veracruz, and in the Caribbean on the Bahamas, Cuba, and Puerto Rico."
+  },
+  batoon: {
+    definition: "A staff, truncheon, or badge of military honour for field-marshals. A term in heraldry."
+  },
+  dioon: {
+    definition: "a genus of cycads in the family Zamiaceae. It is native to Mexico and Central America. Their habitats include tropical forests, pine-oak forest, and dry hillsides, canyons and coastal dunes."
+  },
+  galloon: {
+    definition: "a narrow ornamental strip of fabric, typically a silk braid or piece of lace, used to trim clothing or finish upholstery."
+  },
+  galloon: {
+    phonetic: "ɡæmˈbruːn",
+    definition: "a type of twilled linen cloth, often used for lining clothes"
+  },
+  gossoon: {
+    definition: "A boy or youth, especially a serving boy."
+  },
+  matzoon: {
+    definition: "Matzoon or matsoni is a fermented milk product of Armenian origin, distributed in Armenia and Georgia. In Japan, it is called Caspian Sea yogurt."
+  },
+  al-mammun: {
+    definition: "9th Century Abbasid caliph in whose court at Baghdad the arts flourished"
+  }
+}
