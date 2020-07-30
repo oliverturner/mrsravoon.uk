@@ -32,6 +32,7 @@
     "@types/markdown-it-anchor": "^4.0.3",
     "@types/markdown-it-container": "^2.0.2",
     "@types/node": "14.0.27",
+    "@types/serve-static": "1.13.5",
     "eslint": "7.5.0",
     "eslint-plugin-jest": "23.20.0",
     "husky": "4.2.5",
@@ -50,7 +51,8 @@
     "prettier": "2.0.5",
     "stylelint": "13.6.1",
     "stylelint-config-recommended": "3.0.0",
-    "stylelint-selector-bem-pattern": "2.1.0"
+    "stylelint-selector-bem-pattern": "2.1.0",
+    "typescript": "3.9.7"
   },
   "husky": {
     "hooks": {
@@ -77,6 +79,7 @@
     "test": "jest",
     "lint:css": "stylelint ./client/styles/**/*.scss",
     "lint:js": "eslint ./tools/**/*.js ./client/js/**/*.js",
+    "lint:ts": "tsc",
     "lint": "run-s lint:*",
     "build": "npx eleventy",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",

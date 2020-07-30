@@ -1,0 +1,5 @@
+declare module "@11ty/eleventy-navigation";
+declare module "autoprefixer";
+declare module "clean-css";
+declare module "uglify-es";
+declare module "sass";

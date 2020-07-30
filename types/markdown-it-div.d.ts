@@ -4,27 +4,27 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
-import MarkdownIt = require('markdown-it')
-import Renderer = require('markdown-it/lib/renderer')
-import Token = require('markdown-it/lib/token')
+import MarkdownIt = require("markdown-it");
+import Renderer = require("markdown-it/lib/renderer");
+import Token = require("markdown-it/lib/token");
 
 declare namespace markdownItContainer {
-   interface ContainerOpts {
-      marker?: string
-      validate?(params: string): boolean
-      render?(
-         tokens: Token[],
-         index: number,
-         options: any,
-         env: any,
-         self: Renderer,
-      ): void
-   }
+  interface ContainerOpts {
+    marker?: string;
+    validate?(params: string): boolean;
+    render?(
+      tokens: Token[],
+      index: number,
+      options: any,
+      env: any,
+      self: Renderer
+    ): void;
+  }
 
-   // eslint-disable-next-line @typescript-eslint/camelcase
-   function div_plugin(md: MarkdownIt, opts?: ContainerOpts): void
+  // eslint-disable-next-line @typescript-eslint/camelcase
+  function div_plugin(md: MarkdownIt, opts?: ContainerOpts): void;
 }
 
 // eslint-disable-next-line @typescript-eslint/camelcase
-declare const MarkdownItDiv: typeof markdownItContainer.div_plugin
-export = MarkdownItDiv
+declare const MarkdownItDiv: typeof markdownItContainer.div_plugin;
+export = MarkdownItDiv;

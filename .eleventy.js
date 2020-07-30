@@ -3,12 +3,19 @@ const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 // const htmlmin = require("html-minifier");
-const slugify = require("slugify");
+const slugify = require("slugify").default;
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const { getTaggedRhymes } = require("./tools/tagged-rhymes.js");
+const { getRhymes } = require("./tools/rhymes.js");
 
+/**
+ * [exports description]
+ *
+ * @param   {Eleventy.Config}  eleventyConfig  [eleventyConfig description]
+ *
+ * @return  {Eleventy.UserConfig}
+ */
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addCollection("taggedRhymes", getTaggedRhymes);
+  eleventyConfig.addCollection("taggedRhymes", getRhymes);
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -77,8 +84,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
-      ready: function (err, bs) {
-        bs.addMiddleware("*", (req, res) => {
+      ready: function (_err, bs) {
+        bs.addMiddleware("*", (_req, res) => {
           const content_404 = fs.readFileSync("_site/404.html");
           // Provides the 404 content without redirect.
           res.write(content_404);

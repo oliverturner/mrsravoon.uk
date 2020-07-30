@@ -1,8 +1,6 @@
 const fs = require("fs");
 const allRhymes = require("../__fixtures__/rhymes.json");
 
-/** @namespace import('ravoon') ravoon */
-
 /**
  * Save cleaned and sorted rhymes to disk
  *

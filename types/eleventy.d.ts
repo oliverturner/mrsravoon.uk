@@ -8,8 +8,25 @@ interface Dict<T = unknown> {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type AnyFunction<T = any> = (...args: any[]) => T;
 
+type BSResponse = Response & {
+  write: (html: Buffer) => void;
+  writeHead: (status: number) => void;
+  end: () => void;
+};
+
+type Browsersync = {
+  addMiddleware: (
+    path: String,
+    cb: (_req: Request, res: BSResponse) => void
+  ) => void;
+};
+
 // ---- Eleventy types
 interface BrowserSyncConfig {
+  callbacks?: {
+    ready: (_err: Error, bs: Browsersync) => void;
+  };
+
   /** Browsersync includes a user-interface that is accessed via a separate port. The UI allows to controls all devices, push sync updates and much more. */
   ui?:
     | false
@@ -321,6 +338,8 @@ export interface Config {
     */
   addPassthroughCopy(path: string): void;
   addPassthroughCopy(mapping: { [inputPath: string]: string }): void;
+
+  addWatchTarget: (path: string) => void;
 
   /**
      You can namespace parts of your configuration using `eleventyConfig.namespace`. This
