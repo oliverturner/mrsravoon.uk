@@ -22,10 +22,6 @@ body {
 	background-color: var(--background);
 }
 
-main {
-	max-width: 37.5em;
-}
-
 p,
 pre,
 code {
@@ -53,6 +49,7 @@ footer {
 }
 
 main {
+	max-width: 37.5em;
 	padding-bottom: 2em;
 }
 

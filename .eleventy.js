@@ -1,34 +1,14 @@
+const fs = require("fs");
 const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
-const htmlmin = require("html-minifier");
+// const htmlmin = require("html-minifier");
 const slugify = require("slugify");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const { getTaggedRhymes } = require("./tools/tagged-rhymes.js");
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addCollection("lol", function (collectionApi) {
-    return "lolololol";
-  });
-
-  eleventyConfig.addCollection("taggedRhymes", function (collectionApi) {
-    const posts = collectionApi.getFilteredByTag("post");
-    let oons = [];
-    for (const post of posts) {
-      console.log(post.data.tags, Array.isArray(post.data.tags));
-      oons = oons.concat(post.data.tags);
-    }
-
-    // const p = posts[0];
-    // const { title, page, tags } = p.data;
-    // console.log({ title, page, tags });
-
-    // console.log({ oons });
-    // console.log({ oons:  });
-
-    // return new Map();
-
-    return [...new Set(oons.sort())];
-  });
+  eleventyConfig.addCollection("taggedRhymes", getTaggedRhymes);
 
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
@@ -83,16 +63,32 @@ module.exports = function (eleventyConfig) {
   });
 
   // Minify HTML output
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    if (outputPath.indexOf(".html") > -1) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-      });
-      return minified;
-    }
-    return content;
+  // eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+  //   if (outputPath.indexOf(".html") > -1) {
+  //     let minified = htmlmin.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: true,
+  //       collapseWhitespace: true,
+  //     });
+  //     return minified;
+  //   }
+  //   return content;
+  // });
+
+  eleventyConfig.setBrowserSyncConfig({
+    callbacks: {
+      ready: function (err, bs) {
+        bs.addMiddleware("*", (req, res) => {
+          const content_404 = fs.readFileSync("_site/404.html");
+          // Provides the 404 content without redirect.
+          res.write(content_404);
+          // Add 404 http status code in request header.
+          // res.writeHead(404, { "Content-Type": "text/html" });
+          res.writeHead(404);
+          res.end();
+        });
+      },
+    },
   });
 
   eleventyConfig.addFilter("slug", function (str) {
@@ -129,10 +125,11 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     dir: {
-      input: ".",
-      includes: "_includes",
-      data: "_data",
-      output: "_site",
+      // input: ".",
+      // includes: "_includes",
+      // data: "_data",
+      // output: "_site",
+      input: "src",
     },
   };
 };
