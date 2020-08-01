@@ -86,6 +86,8 @@
     "lint": "run-s lint:*",
     "build": "NODE_ENV=production npx eleventy",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
-    "dev": "npx eleventy --serve"
+    "dev:js": "npm run rollup -- -w",
+    "dev:eleventy": "npx eleventy --serve",
+    "dev": "run-p dev:*"
   }
 }
