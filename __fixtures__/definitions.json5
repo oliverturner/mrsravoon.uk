@@ -1,4 +1,7 @@
 {
+    al-mammun: {
+    definition: "9th Century Abbasid caliph in whose court at Baghdad the arts flourished"
+  },
   hoon: {
     phonetic: "huːn",
     locale: "Australian/NZ informal",
@@ -62,7 +65,7 @@
   shalloon: {
     type: "noun",
     phonetic: "shə-ˈlün",
-    definition: "shalloon (countable and uncountable, plural shalloons) A fabric of tightly woven wool, mainly used for the linings of articles of clothing. (historical) A band for tying the tail of a wig, made of such material. A material used as liner in artillery rounds between the casing and propellant or bursting charge."
+    definition: "A fabric of tightly woven wool, mainly used for the linings of articles of clothing. (historical) A band for tying the tail of a wig, made of such material. A material used as liner in artillery rounds between the casing and propellant or bursting charge."
   },
   balun: {
     definition: "In Antenna Theory, a Balun is used to 'balance' unbalanced systems"
@@ -104,7 +107,5 @@
   matzoon: {
     definition: "Matzoon or matsoni is a fermented milk product of Armenian origin, distributed in Armenia and Georgia. In Japan, it is called Caspian Sea yogurt."
   },
-  al-mammun: {
-    definition: "9th Century Abbasid caliph in whose court at Baghdad the arts flourished"
-  }
+
 }
