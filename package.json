@@ -84,9 +84,8 @@
     "lint:js": "eslint ./tools/**/*.js ./client/js/**/*.js",
     "lint:ts": "tsc",
     "lint": "run-s lint:*",
-    "build": "npx eleventy",
+    "build": "NODE_ENV=production npx eleventy",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
-    "watch": "npx eleventy --watch",
     "dev": "npx eleventy --serve"
   }
 }

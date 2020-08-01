@@ -2,14 +2,29 @@ const fs = require("fs");
 const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
-// const htmlmin = require("html-minifier");
+const htmlmin = require("html-minifier");
 const slugify = require("slugify").default;
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { getRhymes } = require("./tools/rhymes.js");
 
+const { NODE_ENV } = process.env;
+const isProduction = NODE_ENV === "production";
+
+/* Markdown Plugins */
+let mdAnchor = require("markdown-it-anchor");
+let mdAnchorOpts = {
+  permalink: false,
+};
+
+let markdownIt = require("markdown-it");
+const md = markdownIt({
+  html: true,
+  breaks: true,
+  linkify: true,
+});
+const mdLib = md.use(mdAnchor, mdAnchorOpts);
+
 /**
- * [exports description]
- *
  * @param   {Eleventy.Config}  eleventyConfig  [eleventyConfig description]
  *
  * @return  {Eleventy.UserConfig}
@@ -23,16 +38,6 @@ module.exports = function (eleventyConfig) {
   // Merge data instead of overriding
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
-
-  /* Markdown Plugins */
-  let markdownIt = require("markdown-it");
-  let markdownItAnchor = require("markdown-it-anchor");
-  let mdOptions = {
-    html: true,
-    breaks: true,
-    linkify: true,
-  };
-  const md = markdownIt(mdOptions);
 
   // Inline Markdown rendering
   eleventyConfig.addFilter("md", (text) => {
@@ -56,32 +61,43 @@ module.exports = function (eleventyConfig) {
 
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function (code) {
-    return new CleanCSS({}).minify(code).styles;
+    if (isProduction) {
+      return new CleanCSS({}).minify(code).styles;
+    }
+
+    return code;
   });
 
   // Minify JS
   eleventyConfig.addFilter("jsmin", function (code) {
-    let minified = UglifyJS.minify(code);
-    if (minified.error) {
-      console.log("UglifyJS error: ", minified.error);
-      return code;
+    if (isProduction) {
+      let minified = UglifyJS.minify(code);
+      if (minified.error) {
+        console.log("UglifyJS error: ", minified.error);
+        return code;
+      }
+      return minified.code;
     }
-    return minified.code;
+
+    return code;
   });
 
-  // Minify HTML output
-  // eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-  //   if (outputPath.indexOf(".html") > -1) {
-  //     let minified = htmlmin.minify(content, {
-  //       useShortDoctype: true,
-  //       removeComments: true,
-  //       collapseWhitespace: true,
-  //     });
-  //     return minified;
-  //   }
-  //   return content;
-  // });
+  if (isProduction) {
+    // Minify HTML output
+    eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+      if (outputPath.indexOf(".html") > -1) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true,
+        });
+        return minified;
+      }
+      return content;
+    });
+  }
 
+  // Serve a 404 page in development
   eleventyConfig.setBrowserSyncConfig({
     callbacks: {
       ready: function (_err, bs) {
@@ -111,11 +127,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_includes/assets/");
 
-  let opts = {
-    permalink: false,
-  };
-
-  eleventyConfig.setLibrary("md", md.use(markdownItAnchor, opts));
+  eleventyConfig.setLibrary("md", mdLib);
 
   eleventyConfig.addWatchTarget("./src/");
 
