@@ -5,10 +5,15 @@
 </style>
 
 <script>
-  export let player;
+  export let audioEl;
 
-  player.controls = false;
-  console.log(`hello from ${ player?.src }!`);
+  audioEl.controls = false;
 </script>
 
-<p>here's some <strong>HTML!!!</strong></p>
+{@debug}
+
+<div class="audio__controls">
+  <button class="audio__controls__playbtn">play</button>
+  <progress class="audio__controls__progress" value="0"></progress>
+  <span class="audio__controls__timestamp">00:00:00</span>
+</div>
