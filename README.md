@@ -14,8 +14,8 @@ A [website](https://www.mrsravoon.uk) dedicated to tracking ongoing [Sightings](
 * Tag support
 
 ### Build
-* Rollup build pipeline for JS
-* CSS generated from SCSS with PostCSS post-processing
+* Rollup build pipeline for JS and Svelte
+* Global CSS generated from SCSS with PostCSS post-processing
 
 ### Netlify
 * Content managed via Netlify CMS with editor previews
