@@ -1,5 +1,5 @@
 /**
- * @param   {{}}  user  [user description]
+ * @param   {{}}  user
  *
  * @return  {void}
  */

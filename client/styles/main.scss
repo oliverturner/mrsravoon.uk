@@ -341,14 +341,18 @@ h3 {
 }
 
 .audio__media {
-  display: block;
-  width: 100%;
-  margin-top: 0.5rem;
-  filter: saturate(70%) grayscale(1) contrast(100%) invert(12.5%);
-  outline: none;
+  display: none;
 
-  &:focus {
-    filter: invert(100%);
+  &[controls] {
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
+    filter: saturate(70%) grayscale(1) contrast(100%) invert(12.5%);
+    outline: none;
+
+    &:focus {
+      filter: invert(100%);
+    }
   }
 }
 
