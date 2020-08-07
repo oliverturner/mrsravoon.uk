@@ -2,14 +2,18 @@ import Test from "../../components/audio.svelte";
 
 const audioEls = document.querySelectorAll(".audio");
 
-console.log("hello world!");
+for (const el of audioEls) {
+  const imgEl = el.querySelector("img");
+  const audioEl = el.querySelector("audio");
+  el.innerHTML = "";
 
 for (const el of audioEls) {
-  const player = el.querySelector("audio");
   new Test({
     target: el,
     props: {
-      player,
+      imgSrc: imgEl?.src,
+      imgAlt: imgEl?.alt,
+      audioSrc: audioEl?.src,
     },
   });
 }
