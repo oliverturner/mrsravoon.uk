@@ -1,4 +1,4 @@
-import Test from "../../components/audio.svelte";
+import Audio from "../../components/audio.svelte";
 
 const audioEls = document.querySelectorAll(".audio");
 
@@ -7,8 +7,7 @@ for (const el of audioEls) {
   const audioEl = el.querySelector("audio");
   el.innerHTML = "";
 
-for (const el of audioEls) {
-  new Test({
+  new Audio({
     target: el,
     props: {
       imgSrc: imgEl?.src,

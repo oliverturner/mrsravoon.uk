@@ -23,6 +23,11 @@
     cursor: pointer;
   }
 
+  .playbtn__icon,
+  .playbtn__label {
+    display: block;
+  }
+
   .progress {
     flex: 1;
     margin: 0 0.5rem;
@@ -92,9 +97,10 @@
 </audio>
 <div class="controls">
   <button class="playbtn" on:click="{togglePlayback}">
-    <svg class="icon">
+    <svg class="icon playbtn__icon">
       <use href="{playBtnIcon}">
     </svg>
+    <span class="playbtn__label">{playBtnLabel}</span>
   </button>
   <progress class="progress" value="{progress}" on:click={onProgressClick}></progress>
   <span class="timestamp">{timeStamp}</span>
