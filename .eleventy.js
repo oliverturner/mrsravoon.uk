@@ -25,7 +25,7 @@ const md = markdownIt({
 const mdLib = md.use(mdAnchor, mdAnchorOpts);
 
 /**
- * @param   {Eleventy.Config}  eleventyConfig  [eleventyConfig description]
+ * @param   {Eleventy.Config}  eleventyConfig
  *
  * @return  {Eleventy.UserConfig}
  */
