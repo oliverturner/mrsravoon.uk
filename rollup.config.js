@@ -1,12 +1,11 @@
+import svelte from "rollup-plugin-svelte";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
-import svelte from "rollup-plugin-svelte";
 import sveltePreprocess from "svelte-preprocess";
 
 const DEST = "_site/lib";
-const production = !process.env.ROLLUP_WATCH;
-const isDev = !production;
+const isDev = Boolean(process.env.ROLLUP_WATCH) === true;
 
 export default {
   input: "client/js/main.ts",

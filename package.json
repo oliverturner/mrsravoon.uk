@@ -17,16 +17,17 @@
     "url": "https://github.com/oliverturner/ravoon.uk/issues"
   },
   "dependencies": {
+    "@babel/core": "7.11.1",
+    "@rollup/plugin-commonjs": "14.0.0",
+    "@rollup/plugin-node-resolve": "8.4.0",
+    "@rollup/plugin-typescript": "5.0.2",
     "luxon": "^1.22.2",
+    "rollup-plugin-svelte": "5.2.3",
     "svelte": "3.24.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "0.11.0",
     "@11ty/eleventy-navigation": "^0.1.5",
-    "@babel/core": "7.11.1",
-    "@rollup/plugin-commonjs": "14.0.0",
-    "@rollup/plugin-node-resolve": "8.4.0",
-    "@rollup/plugin-typescript": "5.0.2",
     "@tsconfig/svelte": "1.0.8",
     "@types/luxon": "^1.21.0",
     "@types/markdown-it": "10.0.1",
@@ -34,6 +35,7 @@
     "@types/markdown-it-container": "^2.0.2",
     "@types/node": "14.0.27",
     "@types/serve-static": "1.13.5",
+    "acorn": "7.4.0",
     "autoprefixer": "9.8.6",
     "babel-eslint": "10.1.0",
     "clean-css": "^4.2.1",
@@ -53,17 +55,16 @@
     "markdown-it-sup": "^1.0.0",
     "npm-run-all": "4.1.5",
     "postcss": "7.0.32",
+    "postcss-load-config": "2.1.0",
     "prettier": "2.0.5",
     "rollup": "2.23.1",
-    "rollup-plugin-commonjs": "10.1.0",
-    "rollup-plugin-postcss": "3.1.4",
-    "rollup-plugin-svelte": "5.2.3",
     "sass": "1.26.10",
     "stylelint": "13.6.1",
     "stylelint-config-recommended": "3.0.0",
     "stylelint-selector-bem-pattern": "2.1.0",
     "svelte-check": "1.0.11",
     "svelte-preprocess": "4.0.10",
+    "tslib": "2.0.1",
     "typescript": "3.9.7",
     "uglify-es": "^3.3.9"
   },
@@ -74,8 +75,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "npm run prettier",
-      "npm run lint:js -- --fix"
+      "npm run prettier"
     ],
     "*.css": [
       "npm run prettier",
@@ -87,7 +87,6 @@
     ]
   },
   "scripts": {
-    "rollup:build": "rollup -c",
     "rollup:dev": "rollup -cw",
     "clean": "git clean -fxdi",
     "prettier": "prettier --write '**/*.{js,json,css,scss,ts}'",
@@ -96,9 +95,11 @@
     "lint:js": "eslint ./tools/**/*.js ./client/js/**/*.js",
     "lint:ts": "tsc",
     "lint": "run-s lint:*",
-    "build": "NODE_ENV=production npx eleventy",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "dev:eleventy": "npx eleventy --serve",
-    "dev": "run-p dev:*"
+    "dev": "run-p dev:*",
+    "build:eleventy": "NODE_ENV=production npx eleventy",
+    "build:rollup": "rollup -c",
+    "build": "run-p build:*"
   }
 }

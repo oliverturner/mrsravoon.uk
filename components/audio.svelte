@@ -32,7 +32,7 @@
   }
 </script>
 
-<style>
+<style lang="scss">
   .controls {
     display: flex;
     align-items: center;
@@ -79,7 +79,6 @@
   bind:duration
   bind:currentTime
   on:timeupdate={onTimeupdate}>
-  <!-- svelte-ignore missing-declaration -->
   <track
     src="captions_en.vtt"
     kind="captions"
