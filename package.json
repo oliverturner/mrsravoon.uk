@@ -17,15 +17,12 @@
     "url": "https://github.com/oliverturner/ravoon.uk/issues"
   },
   "dependencies": {
-    "@11ty/eleventy-navigation": "^0.1.5",
-    "autoprefixer": "9.8.6",
-    "clean-css": "^4.2.1",
-    "html-minifier": "^4.0.0",
     "luxon": "^1.22.2",
     "svelte": "3.24.1"
   },
   "devDependencies": {
     "@11ty/eleventy": "0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.5",
     "@babel/core": "7.11.1",
     "@rollup/plugin-commonjs": "14.0.0",
     "@rollup/plugin-node-resolve": "8.4.0",
@@ -37,9 +34,12 @@
     "@types/markdown-it-container": "^2.0.2",
     "@types/node": "14.0.27",
     "@types/serve-static": "1.13.5",
+    "autoprefixer": "9.8.6",
     "babel-eslint": "10.1.0",
+    "clean-css": "^4.2.1",
     "eslint": "7.6.0",
     "eslint-plugin-jest": "23.20.0",
+    "html-minifier": "^4.0.0",
     "husky": "4.2.5",
     "jest": "26.2.2",
     "lint-staged": "10.2.11",
