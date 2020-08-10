@@ -1,0 +1,22 @@
+<!doctype html>
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+
+	{% include "components/head.njk" %}
+
+	<body>
+
+		<header class="header chrome">
+			{% include "components/header.njk" %}
+		</header>
+
+		<main class="main container">
+			{{ layoutContent | safe }}
+		</main>
+
+		{% include "components/footer.njk" %}
+	</body>
+
+	{% include "components/icons.njk" %}
+	
+	<script type="module" src="/lib/main.js"></script>
+</html>

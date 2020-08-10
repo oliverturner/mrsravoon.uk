@@ -1,37 +1,52 @@
+const fs = require("fs");
 const { DateTime } = require("luxon");
 const CleanCSS = require("clean-css");
 const UglifyJS = require("uglify-es");
 const htmlmin = require("html-minifier");
-const slugify = require("slugify");
+const slugify = require("slugify").default;
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+const { getRhymes } = require("./tools/rhymes.js");
 
+const { NODE_ENV } = process.env;
+const isProduction = NODE_ENV === "production";
+
+/* Markdown Plugins */
+let mdAnchor = require("markdown-it-anchor");
+let mdAnchorOpts = {
+  permalink: false,
+};
+
+let markdownIt = require("markdown-it");
+const md = markdownIt({
+  html: true,
+  breaks: true,
+  linkify: true,
+});
+const mdLib = md.use(mdAnchor, mdAnchorOpts);
+
+/**
+ * @param   {Eleventy.Config}  eleventyConfig
+ *
+ * @return  {Eleventy.UserConfig}
+ */
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addCollection("taggedRhymes", getRhymes);
+
   // Eleventy Navigation https://www.11ty.dev/docs/plugins/navigation/
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-
-  // Configuration API: use eleventyConfig.addLayoutAlias(from, to) to add
-  // layout aliases! Say you have a bunch of existing content using
-  // layout: post. If you don’t want to rewrite all of those values, just map
-  // post to a new file like this:
-  // eleventyConfig.addLayoutAlias("post", "layouts/my_new_post_layout.njk");
 
   // Merge data instead of overriding
   // https://www.11ty.dev/docs/data-deep-merge/
   eleventyConfig.setDataDeepMerge(true);
 
-  /* Markdown Plugins */
-  let markdownIt = require("markdown-it");
-  let markdownItAnchor = require("markdown-it-anchor");
-  let mdOptions = {
-    html: true,
-    breaks: true,
-    linkify: true,
-  };
-  const md = markdownIt(mdOptions);
-
   // Inline Markdown rendering
   eleventyConfig.addFilter("md", (text) => {
     return md.render(text);
+  });
+
+  // Inline Markdown rendering
+  eleventyConfig.addFilter("json", (data) => {
+    return JSON.stringify(data, null, 2);
   });
 
   // Date formatting (human readable)
@@ -46,30 +61,57 @@ module.exports = function (eleventyConfig) {
 
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function (code) {
-    return new CleanCSS({}).minify(code).styles;
+    if (isProduction) {
+      return new CleanCSS({}).minify(code).styles;
+    }
+
+    return code;
   });
 
   // Minify JS
   eleventyConfig.addFilter("jsmin", function (code) {
-    let minified = UglifyJS.minify(code);
-    if (minified.error) {
-      console.log("UglifyJS error: ", minified.error);
-      return code;
+    if (isProduction) {
+      let minified = UglifyJS.minify(code);
+      if (minified.error) {
+        console.log("UglifyJS error: ", minified.error);
+        return code;
+      }
+      return minified.code;
     }
-    return minified.code;
+
+    return code;
   });
 
-  // Minify HTML output
-  eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
-    if (outputPath.indexOf(".html") > -1) {
-      let minified = htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true,
-      });
-      return minified;
-    }
-    return content;
+  if (isProduction) {
+    // Minify HTML output
+    eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
+      if (outputPath.indexOf(".html") > -1) {
+        let minified = htmlmin.minify(content, {
+          useShortDoctype: true,
+          removeComments: true,
+          collapseWhitespace: true,
+        });
+        return minified;
+      }
+      return content;
+    });
+  }
+
+  // Serve a 404 page in development
+  eleventyConfig.setBrowserSyncConfig({
+    callbacks: {
+      ready: function (_err, bs) {
+        bs.addMiddleware("*", (_req, res) => {
+          const content_404 = fs.readFileSync("_site/404.html");
+          // Provides the 404 content without redirect.
+          res.write(content_404);
+          // Add 404 http status code in request header.
+          // res.writeHead(404, { "Content-Type": "text/html" });
+          res.writeHead(404);
+          res.end();
+        });
+      },
+    },
   });
 
   eleventyConfig.addFilter("slug", function (str) {
@@ -85,13 +127,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_includes/assets/");
 
-  let opts = {
-    permalink: false,
-  };
+  eleventyConfig.setLibrary("md", mdLib);
 
-  eleventyConfig.setLibrary("md", md.use(markdownItAnchor, opts));
-
-  eleventyConfig.addWatchTarget("./src/");
+  eleventyConfig.addWatchTarget("./components/");
+  eleventyConfig.addWatchTarget("./client/");
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
@@ -106,10 +145,11 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: "njk",
     dataTemplateEngine: "njk",
     dir: {
-      input: ".",
-      includes: "_includes",
-      data: "_data",
-      output: "_site",
+      // input: ".",
+      // includes: "_includes",
+      // data: "_data",
+      // output: "_site",
+      input: "src",
     },
   };
 };

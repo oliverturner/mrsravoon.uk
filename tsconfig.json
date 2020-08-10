@@ -1,0 +1,27 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES2017",
+    "lib": ["DOM", "DOM.Iterable", "ES2019"],
+    "checkJs": true /* Report errors in .js files. */,
+    "allowJs": true,
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
+    "paths": {
+      "*": ["types/*"]
+    },
+    "resolveJsonModule": true
+  },
+  "include": [
+    "./tools",
+    "./types",
+    "./src/**/*.js",
+    "./client/js/*.ts",
+    "./components/**/*",
+    ".eleventy.js"
+  ],
+  "exclude": ["./_site"]
+}

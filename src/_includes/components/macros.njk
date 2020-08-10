@@ -1,0 +1,16 @@
+{% macro svg(className, src) %}
+{% set _svg %}
+  {% include src %}
+{% endset %}
+
+<div class="{{ className }}">{{ _svg | safe }}</div>
+{% endmacro %}
+
+{% macro ravoon() %}<b class="ravoon"><span>Mrs.</span> RAVOON</b>{% endmacro %}
+
+{% macro audio(imgAlt, imageSrc, audioSrc) %}
+<div class="audio">
+  <img class="audio__img" src="/static/img/{{ imageSrc }}" alt="{{ imgAlt }}" />
+  <audio class="audio__media" src="/static/mp3/{{ audioSrc }}"></audio>
+</div>
+{% endmacro %}

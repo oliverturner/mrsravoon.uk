@@ -11,8 +11,14 @@ const nodeEnvIsDevelopment = nodeEnv === "development";
 const shouldMinifyCSS = !nodeEnvIsDevelopment;
 
 // Create a visual error message to overlay the site
+/**
+ * @param   {Error}  error
+ */
 const CSSError = (error) => `/* Error compiling stylesheet: ${error} */`;
 
+/**
+ * @param   {string}  scss
+ */
 const compileScss = (scss) => {
   let result;
   try {
@@ -47,10 +53,25 @@ const compileScss = (scss) => {
   return result.css;
 };
 
+/**
+ * @param   {Record<string, string>}  targets
+ *
+ * @return  {Record<string, string>}
+ */
+function compileSassTargets(targets) {
+  /**
+   * @param   {Record<string, string>}  acc
+   * @param   {string}  key
+   *
+   * @return  {Record<string, string>}
+   */
+  function compileTarget(acc, key) {
+    acc[key] = compileScss(targets[key]);
+    return acc;
+  }
+  return Object.keys(targets).reduce(compileTarget, {});
+}
+
 module.exports = {
-  compileSassTargets: (targets) =>
-    Object.keys(targets).reduce((acc, key) => {
-      acc[key] = compileScss(targets[key]);
-      return acc;
-    }, {}),
+  compileSassTargets,
 };
