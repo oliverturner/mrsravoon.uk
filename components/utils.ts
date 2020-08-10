@@ -1,3 +1,6 @@
+/**
+ * Turn seconds into hh:mm:ss format
+ */
 export function formatTimestamp(currentTime: number) {
   const hours = Math.floor(currentTime / 60 / 60);
   const minutes = Math.floor(currentTime / 60) - hours * 60;

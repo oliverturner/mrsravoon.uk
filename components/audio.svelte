@@ -38,6 +38,9 @@
     align-items: center;
 
     margin-top: 0.5rem;
+    padding: 0.25rem;
+    background: var(--chrome-bg);
+    color: var(--chrome-text);
   }
 
   .playbtn {
@@ -55,6 +58,13 @@
     border-radius: var(--wh);
     text-align: center;
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      .icon {
+        fill: var(--chrome-text);
+      }
+    }
   }
 
   .playbtn__icon,

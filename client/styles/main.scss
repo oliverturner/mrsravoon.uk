@@ -126,10 +126,12 @@ h3 {
 }
 
 .icon {
+  transition: fill 0.3s;
+
   max-width: 100%;
   max-height: 100%;
 
-  fill: none;
+  fill: transparent;
   stroke: currentColor;
   stroke-width: 2;
   stroke-linecap: round;

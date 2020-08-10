@@ -129,7 +129,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.setLibrary("md", mdLib);
 
-  eleventyConfig.addWatchTarget("./src/");
+  eleventyConfig.addWatchTarget("./components/");
+  eleventyConfig.addWatchTarget("./client/");
 
   return {
     templateFormats: ["md", "njk", "html", "liquid"],
