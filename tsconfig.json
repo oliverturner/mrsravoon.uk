@@ -1,23 +1,14 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
-    /* Basic Options */
-    "module": "commonjs" /* Specify module code generation: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext'. */,
+    "module": "ESNext",
     "target": "ES2017",
     "lib": ["DOM", "DOM.Iterable", "ES2019"],
     "checkJs": true /* Report errors in .js files. */,
     "allowJs": true,
-    "noEmit": true,
 
     /* Strict Type-Checking Options */
-    "strict": true /* Enable all strict type-checking options. */,
-    "noUnusedLocals": true /* Report errors on unused locals. */,
-    "noUnusedParameters": true /* Report errors on unused parameters. */,
-    "noImplicitReturns": true /* Report error when not all code paths in function return a value. */,
-    "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
-
-    /* Module Resolution Options */
-    "moduleResolution": "node" /* Specify module resolution strategy: 'node' (Node.js) or 'classic' (TypeScript pre-1.6). */,
+    "strict": true,
     "baseUrl": "./" /* Base directory to resolve non-absolute module names. */,
     "paths": {
       "*": ["types/*"]
@@ -28,8 +19,8 @@
     "./tools",
     "./types",
     "./src/**/*.js",
-    "./client/**/*.ts",
-    "./components/**/*.svelte",
+    "./client/js/*.ts",
+    "./components/**/*",
     ".eleventy.js"
   ],
   "exclude": ["./_site"]

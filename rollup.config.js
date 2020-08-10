@@ -27,6 +27,6 @@ export default {
       dedupe: ["svelte"],
     }),
     commonjs(),
-    typescript({ sourceMap: isDev }),
+    typescript(),
   ],
 };
