@@ -340,7 +340,10 @@ h3 {
 }
 
 .audio {
+  max-width: 400px;
   margin-top: 1rem;
+  padding: 0.25rem;
+  background: #000;
 
   @media (min-width: 640px) {
     max-width: 300px;

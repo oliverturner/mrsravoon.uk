@@ -37,7 +37,6 @@
     display: flex;
     align-items: center;
 
-    margin-top: 0.5rem;
     padding: 0.25rem;
     background: var(--chrome-bg);
     color: var(--chrome-text);
@@ -73,8 +72,21 @@
   }
 
   .progress {
+    -webkit-appearance: none;
+    appearance: none;
+
     flex: 1;
     margin: 0 0.5rem;
+
+    &::-webkit-progress-bar {
+      border-radius: 2px;
+      background-color: var(--chrome-highlight);
+    }
+
+    &::-webkit-progress-value {
+      border-radius: 2px;
+      background-color: var(--text-color-secondary);
+    }
   }
 
   .timestamp {
