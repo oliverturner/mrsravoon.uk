@@ -10,17 +10,19 @@ tags:
   - hewn
   - monsoon
 ---
+{% import "components/macros.njk" as macros with context %}
+
 Over bourbons the Bishop disagreed with the verger,
 On matters parochial he continued to urge her, 
 Until drained of all grace he took a teaspoon:
-Plunged it straight through the heart of MRS RAVOON.
+Plunged it straight through the heart of {{ macros.ravoon() }}.
 
 To the briny basalt reaching up from the sea
 My shipwrecked soul clutched, desperately.
 But damnation awaited, for from it, rough-hewn,
-Was a towering effigy: MRS RAVOON
+Was a towering effigy: {{ macros.ravoon() }}
 
 On tropical railways, I toured and explored
 When great winds leapt up, and trapped us aboard 
 And thus my cruel fate, forced by the monsoon:
-To be stuck in a carriage with MRS RAVOON. 
+To be stuck in a carriage with {{ macros.ravoon() }}. 

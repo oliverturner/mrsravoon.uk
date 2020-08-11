@@ -1,10 +1,8 @@
 ---
-title: A disagreement, a drowning, a dousing
-date: 2020-07-31T15:15:07.534Z
-author: David Wigram
-summary: "Another BAFTA-nominated filmmaker transports us from bishopric to
-  Borneo through this triptych of terror: ecumenical bloodbaths, statuesque
-  wrecks and tropical travails await the intrepid… "
+title: An epic
+date: 2020-08-11
+author: Alex Sultoon
+summary: "MR. SULTOON takes us on a veritable Odyssey, shattering records, conventions and fourth walls alike in a climactic 18 line final verse"
 tags:
   - pontoon
   - strewn
