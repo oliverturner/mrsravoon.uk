@@ -35,7 +35,8 @@
     "./types",
     "./src/**/*.js",
     "./client/**/*.js",
+    "./components/**/*",
     ".eleventy.js"
   ],
-  "exclude": ["site/_data/build.js"]
+  // "exclude": ["node_modules/*", "_site/*"],
 }

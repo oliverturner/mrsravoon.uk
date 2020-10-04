@@ -1,4 +1,4 @@
-<style>
+<style lang="scss">
   .controls {
     display: flex;
     align-items: center;
@@ -38,14 +38,14 @@
   }
 </style>
 
-<script>
-  export let imgSrc;
-  export let imgAlt;
-  export let audioSrc;
+<script lang="ts">
+  export let imgSrc = "";
+  export let imgAlt ="";
+  export let audioSrc ="";
 
   let paused = true;
-  let duration;
-  let currentTime;
+  let duration = 0;
+  let currentTime = 0;
 
   let progress = 0;
   let timeStamp = "00:00:00";
@@ -73,12 +73,10 @@
     timeStamp = formatTimestamp();
   }
 
-  function onProgressClick(event){
-    currentTime = (event.offsetX / event.target.clientWidth) * duration
+  function onProgressClick(event: MouseEvent){
+    currentTime = (event.offsetX / (event.target as HTMLProgressElement).clientWidth) * duration
   }
 </script>
-
-{@debug currentTime, duration, progress}
 
 <img class="img" src="{imgSrc}" alt="{imgAlt}" />
 <audio
@@ -98,7 +96,7 @@
 <div class="controls">
   <button class="playbtn" on:click="{togglePlayback}">
     <svg class="icon playbtn__icon">
-      <use href="{playBtnIcon}">
+      <use xlink:href="{playBtnIcon}">
     </svg>
     <span class="playbtn__label">{playBtnLabel}</span>
   </button>

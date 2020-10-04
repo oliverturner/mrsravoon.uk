@@ -3,39 +3,31 @@ import typescript from "@rollup/plugin-typescript";
 import svelte from "rollup-plugin-svelte";
 import postcss from "rollup-plugin-postcss";
 import commonjs from "rollup-plugin-commonjs";
-// import autoPreprocess from 'svelte-preprocess';
+import sveltePreprocess from "svelte-preprocess";
 
 const production = !process.env.ROLLUP_WATCH;
 
-/**
- * @param   {string}  [path]  slash-prefixed path relative to _site/lib
- * @return  {string}
- */
-function dest(path) {
-  return "_site/lib" + (path ? path : "");
-}
+const DEST = "_site/lib";
 
 export default {
   input: "client/js/main.js",
   output: {
     dev: !production,
-    dir: dest(),
-    format: "es",
+    dir: DEST,
+    // format: "es",
   },
   plugins: [
     postcss({}),
     resolve({
       browser: true,
-      dedupe: (importee) =>
-        importee === "svelte" || importee.startsWith("svelte/"),
+      dedupe: ["svelte"],
     }),
     commonjs(),
-
     svelte({
-      // preprocess: autoPreprocess(),
+      preprocess: sveltePreprocess(),
       emitCss: true,
       css: function (css) {
-        css.write(dest("/main.css"), true);
+        css.write("_site/lib/main.css", true);
       },
     }),
     typescript({ sourceMap: !production }),
