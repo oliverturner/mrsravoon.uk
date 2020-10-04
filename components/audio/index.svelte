@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { formatTimestamp } from "./utils";
+  import { formatTimestamp } from "../utils";
 
   export let imgSrc: string;
   export let imgAlt: string;
