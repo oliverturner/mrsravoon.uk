@@ -38,5 +38,5 @@
     "./components/**/*",
     ".eleventy.js"
   ],
-  // "exclude": ["node_modules/*", "_site/*"],
+  "exclude": ["node_modules/*", "_site/*"]
 }
