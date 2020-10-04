@@ -13,7 +13,7 @@
 			{% endif %}
 			{% if post.data.tags %}
 				<div class="tags">
-					{% for tag in post.data.tags %}
+					{% for tag in post.data.tags | sort() %}
 						{%- if tag != "post" -%}
 							{% set tagUrl %}/tags/{{ tag }}/{% endset %}
 							<a class="tag" href="{{ tagUrl | url }}">{{ tag }}</a>

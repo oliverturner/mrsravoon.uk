@@ -14,7 +14,7 @@ section: post
 
   {% if tags %}
     <div class="tags">
-    {% for tag in tags %}
+    {% for tag in tags | sort() %}
       {%- if tag != "post" -%}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
         <a class="tag" href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
