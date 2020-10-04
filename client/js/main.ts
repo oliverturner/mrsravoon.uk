@@ -1,4 +1,4 @@
-import Audio from "../../components/index.svelte";
+import Audio from "../../components/audio/index.svelte";
 
 const audioEls = document.querySelectorAll(".audio");
 
