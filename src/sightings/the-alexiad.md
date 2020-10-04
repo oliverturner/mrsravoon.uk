@@ -1,5 +1,5 @@
 ---
-title: An epic
+title: The Alexiad
 date: 2020-08-11
 author: Alex Sultoon
 summary: "MR. SULTOON takes us on a veritable Odyssey, shattering records, conventions and fourth walls alike in a climactic 18 line final verse"
